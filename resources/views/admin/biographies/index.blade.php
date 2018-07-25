@@ -17,7 +17,7 @@
             <h3>Titre : {{$biographie->titre}}</h3>
             <img class="card-img-top mt-2" src="{{Storage::disk('imgBiographie')->url($biographie->image)}}" alt="Card image cap">
             <div class="card-body">
-                <h3>contenu : <br>{{$biographie->contenu}}</h3>
+                <h3>contenu : <br>{!!$biographie->contenu!!}</h3>
             </div>
             <div class="card-body">
                 <a class="btn btn-primary" href="{{route('biographies.edit',['id'=>$biographie->id])}}">Edité</a>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Carousel;
+use Storage;
 use Illuminate\Http\Request;
 
 class CarouselController extends Controller
@@ -14,7 +15,8 @@ class CarouselController extends Controller
      */
     public function index()
     {
-        //
+        $carousels = Carousel::all();
+        return view("admin.carousels.index",compact('carousels'));
     }
 
     /**
@@ -24,7 +26,7 @@ class CarouselController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.carousels.create",compact('carousels'));
     }
 
     /**
@@ -35,7 +37,12 @@ class CarouselController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $carousel = new Carousel;
+        $carousel->name = $request->name;
+        $carousel->image = $request->image->store('','imgCarousel');
+
+        $carousel->save();
+        return redirect()->route("carousels.index");
     }
 
     /**
@@ -55,9 +62,10 @@ class CarouselController extends Controller
      * @param  \App\Carousel  $carousel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Carousel $carousel)
+    public function edit($id)
     {
-        //
+        $carousels = Carousel::find($id);
+        return view('admin.carousels.edit', compact('carousels'));
     }
 
     /**
@@ -67,9 +75,15 @@ class CarouselController extends Controller
      * @param  \App\Carousel  $carousel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Carousel $carousel)
+    public function update(Request $request, $id)
     {
-        //
+        $carousel = Carousel::find($id);
+        $carousel->name = $request->name;
+        if($request->image != null){
+        $carousel->image = $request->image->store('','imgCarousel');
+        }
+        $carousel->save();
+        return redirect()->route('carousels.index',['carousel'=> $carousel->id]);
     }
 
     /**
@@ -78,8 +92,10 @@ class CarouselController extends Controller
      * @param  \App\Carousel  $carousel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Carousel $carousel)
+    public function destroy($id)
     {
-        //
+        $carousel = Carousel::find($id);
+        $carousel->delete();
+        return redirect()->route('carousels.index');
     }
 }

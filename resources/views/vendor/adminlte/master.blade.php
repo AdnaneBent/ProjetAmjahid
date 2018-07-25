@@ -61,7 +61,13 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js"></script>
 @endif
 
-@yield('adminlte_js')
+
+
+<script src="{{asset('vendor/unisharp/laravel-ckeditor/ckeditor.js')}}"></script>
+
+<script>
+    CKEDITOR.replace('hello')
+</script>
 
 </body>
 </html>

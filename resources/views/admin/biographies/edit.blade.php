@@ -12,7 +12,7 @@
   @csrf
     <div>
       <label for="titre">
-        Nom du biographie<br>
+        titre de la biographie<br>
         @if($errors->has('titre'))
           <div class="text-danger">{{ $errors->first('titre')}}</div>
         @endif
@@ -23,7 +23,7 @@
         @if($errors->has('contenu'))
           <div class="text-danger">{{ $errors->first('contenu')}}</div>
         @endif
-        <textarea name="contenu">{{old('contenu', $biographie->contenu)}}</textarea>
+        <textarea id="hello" name="contenu">{{old('contenu', $biographie->contenu)}}</textarea>
         </label>
         <br>
       <img src="" alt="">
