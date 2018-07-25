@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Palmares;
 use Illuminate\Http\Request;
+use App\Http\Requests\StorePalmares;
 
 class PalmaresController extends Controller
 {
@@ -34,7 +35,7 @@ class PalmaresController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePalmares $request)
     {
         $palmares = new Palmares;
         $palmares->annee = $request->annee;

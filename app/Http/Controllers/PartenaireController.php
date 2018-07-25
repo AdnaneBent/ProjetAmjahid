@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Partenaire;
 use Illuminate\Http\Request;
+use App\Http\Requests\StorePartenaire;
+use App\Http\Requests\StoreEditPartenaire;
 
 class PartenaireController extends Controller
 {
@@ -34,7 +36,7 @@ class PartenaireController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePartenaire $request)
     {
         $partenaire = new Partenaire;
         $partenaire->name = $request->name;
@@ -74,7 +76,7 @@ class PartenaireController extends Controller
      * @param  \App\Partenaire  $partenaire
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreEditPartenaire $request, $id)
     {
         $partenaire = Partenaire::find($id);
         $partenaire->name = $request->name;

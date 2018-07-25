@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Biographie;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreBiographie;
+use App\Http\Requests\StoreEditBiographie;
 
 class BiographieController extends Controller
 {
@@ -34,7 +36,7 @@ class BiographieController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreBiographie $request)
     {
         $biographie = new Biographie;
         $biographie->titre = $request->titre;
@@ -77,7 +79,7 @@ class BiographieController extends Controller
      * @param  \App\Biographie  $biographie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreEditBiographie $request, $id)
     {
         $biographie = Biographie::find($id);
 
