@@ -72,6 +72,12 @@ return [
             'url' => env('APP_URL').'/storage/imgCarousel',
             'visibility' => 'public',
         ],
+        'imgEngagement' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/imgEngagement'),
+            'url' => env('APP_URL').'/storage/imgEngagement',
+            'visibility' => 'public',
+        ],
 
         's3' => [
             'driver' => 's3',

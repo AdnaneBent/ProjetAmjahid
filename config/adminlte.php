@@ -135,9 +135,14 @@ return [
             'icon'        => 'file',
         ],
         [
-            'text'        => 'Carousel',
+            'text'        => 'Carousels',
             'url'         => 'admin/carousels',
             'icon'        => 'image',
+        ],
+        [
+            'text'        => 'Engagements',
+            'url'         => 'admin/engagements',
+            'icon'        => 'file',
         ],
         'ACCOUNT SETTINGS',
         [

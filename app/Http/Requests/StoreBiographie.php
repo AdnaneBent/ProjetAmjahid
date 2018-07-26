@@ -25,7 +25,7 @@ class StoreBiographie extends FormRequest
     {
         return [
             'titre'  =>  "required|max:45",
-            'contenu' => 'required|max:255',
+            'contenu' => 'required|',
             'image'  =>  'required|max:20000000|',
             'image.max' => "L'image ne peut pas dépasser 20Mb",
         ];
@@ -37,7 +37,6 @@ class StoreBiographie extends FormRequest
         'titre.required'  =>  "Il faut un titre pour la biographie",
         'titre.max' => "Maximum :max caractères",
         'contenu.required' => "Il faut du contenu",
-        'contenu.max' => "Maximum :max caractères",
         'image.required'  =>  "Il faut une image pour la biographie",
         'image.max' => "L'image ne peut pas dépasser 20Mb",
             ];

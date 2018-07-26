@@ -95,6 +95,7 @@ class PartenaireController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
+    
     {
         $partenaire = Partenaire::find($id);
         $partenaire->delete();
