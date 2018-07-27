@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
@@ -29,3 +26,4 @@ Route::resource('/admin/engagements', 'EngagementController');
 Route::resource('/admin/galeries', 'GalerieController');
 
 Route::get('/', 'FrontController@welcome')->name('welcome');
+Route::get('/partenaire', 'FrontController@partenaire')->name('partenaire');
