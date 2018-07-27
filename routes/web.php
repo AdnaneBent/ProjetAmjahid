@@ -26,5 +26,6 @@ Route::resource('/admin/palmares', 'PalmaresController');
 Route::resource('/admin/socialNetworks', 'SocialNetworkController');
 Route::resource('/admin/newsletters', 'NewsletterController');
 Route::resource('/admin/engagements', 'EngagementController');
+Route::resource('/admin/galeries', 'GalerieController');
 
 Route::get('/', 'FrontController@welcome')->name('welcome');

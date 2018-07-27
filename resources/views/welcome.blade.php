@@ -91,15 +91,15 @@
       <!--== Collect the nav links, forms, and other content for toggling ==-->
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">
-          <li class="dropdown megamenu-fw"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Home</a>
+          <li class="dropdown megamenu-fw"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Accueil</a>
           </li>
-          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Les engagements</a>
+          <li class="dropdown"> <a href="#">Mes engagements</a>
             
           </li>
-          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Les partenaires</a>
+          <li class="dropdown"><a href="#">Les partenaires</a>
 
           </li>
-          <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Presses</a>
+          <li class="dropdown"> <a href="#">Presses</a>
           
           </li>
         </ul>
@@ -388,131 +388,51 @@
     </div>
   </section>
 
-  {{-- Engagement End --}}
+	{{-- Engagement End --}}
 
    <!--== Portfolio Start ==-->
-  <section class="white-bg pb-0">
-  	<div class="container-fluid">
+  <section class="pb-0">
+		<div class="container-fluid">
+				<h1 class="text-center text-warning">Galerie</h1>
     	<div class="row">
         <div class="col-md-12">
-          <div id="portfolio-gallery" class="cbp">
+          <div id="portfolio-gallery" class="cbp container">
+						@foreach($galeries as $galerie)
                 <div class="cbp-item branding col-md-3 col-sm-3 with-spacing">
-                  <figure class="imghvr-blur text-center">
-                    <img src="{{asset('theme/assets/images/portfolio/grid/55.jpg')}}" alt="your-image">
-                    <figcaption class="dark-bg">
-                      <div class="center-layout">
-                        <div class="v-align-middle">
-                          <h4 class="mb-0 mt-10 white-color">Daniel Barkle</h4>
-                          <p class="default-color">Visual Identity</p>
-                        </div>
-                      </div>
-                    </figcaption>
+                  <figure class="mg-image">
+                    <img src="{{Storage::disk('imgGalerie')->url($galerie->image)}}" alt="{{$galerie->name}}" alt="">
                   </figure>
-                </div>
-
-                <div class="cbp-item print web-design col-md-3 col-sm-3 with-spacing">
-                  <figure class="imghvr-blur text-center">
-                    <img src="{{asset('theme/assets/images/portfolio/grid/56.jpg')}}" alt="your-image">
-                    <figcaption class="dark-bg">
-                      <div class="center-layout">
-                        <div class="v-align-middle">
-                          <h4 class="mb-0 mt-10 white-color">Versions Packaging</h4>
-                          <p class="default-color">Art Direction</p>
-                        </div>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="cbp-item print advertising col-md-3 col-sm-3 with-spacing">
-                  <figure class="imghvr-blur text-center">
-                    <img src="{{asset('theme/assets/images/portfolio/grid/57.jpg')}}" alt="your-image">
-                    <figcaption class="dark-bg">
-                      <div class="center-layout">
-                        <div class="v-align-middle">
-                          <h4 class="mb-0 mt-10 white-color">Juicy Redruby</h4>
-                          <p class="default-color">Print Media</p>
-                        </div>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="cbp-item branding photography col-md-3 col-sm-3 with-spacing">
-                  <figure class="imghvr-blur text-center">
-                    <img src="{{asset('theme/assets/images/portfolio/grid/58.jpg')}}" alt="your-image">
-                    <figcaption class="dark-bg">
-                      <div class="center-layout">
-                        <div class="v-align-middle">
-                          <h4 class="mb-0 mt-10 white-color">Fruit Up</h4>
-                          <p class="default-color">Web Design</p>
-                        </div>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="cbp-item branding web-design col-md-3 col-sm-3 with-spacing">
-                  <figure class="imghvr-blur text-center">
-                    <img src="{{asset('theme/assets/images/portfolio/grid/59.jpg')}}" alt="your-image">
-                    <figcaption class="dark-bg">
-                      <div class="center-layout">
-                        <div class="v-align-middle">
-                          <h4 class="mb-0 mt-10 white-color">Clini Cloud</h4>
-                          <p class="default-color">Typography</p>
-                        </div>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="cbp-item print advertising col-md-3 col-sm-3 with-spacing">
-                  <figure class="imghvr-blur text-center">
-                    <img src="{{asset('theme/assets/images/portfolio/grid/60.jpg')}}" alt="your-image">
-                    <figcaption class="dark-bg">
-                      <div class="center-layout">
-                        <div class="v-align-middle">
-                          <h4 class="mb-0 mt-10 white-color">Ovik Luxury</h4>
-                          <p class="default-color">Branding</p>
-                        </div>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="cbp-item branding photography col-md-3 col-sm-3 with-spacing">
-                  <figure class="imghvr-blur text-center">
-                    <img src="{{asset('theme/assets/images/portfolio/grid/61.jpg')}}" alt="your-image">
-                    <figcaption class="dark-bg">
-                      <div class="center-layout">
-                        <div class="v-align-middle">
-                          <h4 class="mb-0 mt-10 white-color">Loeffler Randall</h4>
-                          <p class="default-color">User Interface</p>
-                        </div>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </div>
-
-                <div class="cbp-item print web-design col-md-3 col-sm-3 with-spacing">
-                  <figure class="imghvr-blur text-center">
-                    <img src="{{asset('theme/assets/images/portfolio/grid/62.jpg')}}" alt="your-image">
-                    <figcaption class="dark-bg">
-                      <div class="center-layout">
-                        <div class="v-align-middle">
-                          <h4 class="mb-0 mt-10 white-color">Sofia Palmero</h4>
-                          <p class="default-color">Identity</p>
-                        </div>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </div>
+								</div>
+								@endforeach
             	</div>
             </div>
         </div>
     </div>
   </section>
-  <!--== Portfolio End ==-->
+	<!--== Portfolio End ==-->
+	
+	<!--== Footer Start ==-->
+  <footer class="footer dark-block" id="footer-fixed">
+    <div class="footer-copyright"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            <div class="copy-right text-left">© 2018 <i class="icon icofont icofont-heart-alt"></i> Torneo. All rights reserved</div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <ul class="social-media">
+              <li><a href="#" class="icofont icofont-social-facebook"></a></li>
+			  <li><a href="#" class="icofont icofont-social-twitter"></a></li>
+			  <li><a href="#" class="icofont icofont-social-behance"></a></li>
+			  <li><a href="#" class="icofont icofont-social-dribble"></a></li>
+           	  <li><a href="#" class="icofont icofont-social-linkedin"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!--== Footer End ==-->
 
 </div>
 <!--== Wrapper End ==-->

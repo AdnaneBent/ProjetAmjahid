@@ -78,6 +78,12 @@ return [
             'url' => env('APP_URL').'/storage/imgEngagement',
             'visibility' => 'public',
         ],
+        'imgGalerie' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/imgGalerie'),
+            'url' => env('APP_URL').'/storage/imgGalerie',
+            'visibility' => 'public',
+        ],
 
         's3' => [
             'driver' => 's3',

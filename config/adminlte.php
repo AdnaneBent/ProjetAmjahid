@@ -144,6 +144,11 @@ return [
             'url'         => 'admin/engagements',
             'icon'        => 'file',
         ],
+         [
+            'text'        => 'Galerie',
+            'url'         => 'admin/galeries',
+            'icon'        => 'image',
+        ],
         'ACCOUNT SETTINGS',
         [
             'text' => 'Change Password',
