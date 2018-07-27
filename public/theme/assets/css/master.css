@@ -11806,5 +11806,13 @@ section.big-block .client-logo {
     transform: scale(1.25);
 }
 
+.hovnav:hover {
+    color: #be8c3c !important;
+}
+
+.textgold {
+    color: #be8c3c !important;
+}
+
 
 /* just apply some height and width to the wrapper.*/

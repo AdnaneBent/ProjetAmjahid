@@ -20,6 +20,9 @@
       </label><br>
       <img src="" alt="">
       <input class="pb-2" name="image" type="file"><br>
+      @if($errors->has('image'))
+         <div class="text-danger">{{ $errors->first('image')}}</div>
+       @endif
       <button type="submit" class="btn btn-info">Enregistrer</button>
     </div><br>
     <div class="card-body">

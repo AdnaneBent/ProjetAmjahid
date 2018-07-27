@@ -73,9 +73,6 @@
       <!--== Start Atribute Navigation ==-->
       <div class="attr-nav hidden-xs sm-display-none">
         <ul class="social-media-dark social-top">
-          <li><a href="#" class="icofont icofont-social-facebook"></a></li>
-          <li><a href="#" class="icofont icofont-social-twitter"></a></li>
-          <li><a href="#" class="icofont icofont-social-linkedin"></a></li>
           <li class="search"><a href="#" id="search-button"><i class="icofont icofont-search"></i></a></li>
         </ul>
       </div>
@@ -91,15 +88,16 @@
       <!--== Collect the nav links, forms, and other content for toggling ==-->
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">
-          <li class="dropdown megamenu-fw"> <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">Accueil</a>
+          <li class="dropdown"> <a class="hovnav" href="#">Accueil</a>
+          
           </li>
-          <li class="dropdown"> <a href="#">Mes engagements</a>
+          <li class="dropdown"> <a class="hovnav" href="#">Mes engagements</a>
             
           </li>
-          <li class="dropdown"><a href="#">Les partenaires</a>
+          <li class="dropdown"><a class="hovnav" href="#">Les partenaires</a>
 
           </li>
-          <li class="dropdown"> <a href="#">Presses</a>
+          <li class="dropdown"> <a class="hovnav" href="#">Presses</a>
           
           </li>
         </ul>
@@ -360,12 +358,11 @@
             </div>
             <div class="col-md-6 wow fadeInRight mt-100" data-wow-delay="0.2s">
                 <div>
-                <h2>{{$biographie->titre}}</h2>
+                <h2 class="textgold">{{$biographie->titre}}</h2>
                     <p>{!!$biographie->contenu!!}</p>
                 </div>
             </div>
         </div>
-        <p class="mt-30"><a class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
     </div>
   </section>
   <!--== Biographies End ==-->
@@ -376,7 +373,7 @@
     <div class="container">
       <div class="row">
 		      <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.1s">
-        	<h2 class="mt-0 mb-0 font-80px">{{$engagement->titre}}</h2
+        	<h2 class="mt-0 mb-0 font-80px textgold">{{$engagement->titre}}</h2
         	<p class="mt-30 font-300 font-16px">{!!$engagement->contenu!!}</p>
           <p class="mt-30"><a class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
         </div>
@@ -393,7 +390,7 @@
    <!--== Portfolio Start ==-->
   <section class="pb-0">
 		<div class="container-fluid">
-				<h1 class="text-center text-warning">Galerie</h1>
+				<h1 class="text-center textgold">Galerie</h1>
     	<div class="row">
         <div class="col-md-12">
           <div id="portfolio-gallery" class="cbp container">
@@ -417,15 +414,12 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-xs-12">
-            <div class="copy-right text-left">© 2018 <i class="icon icofont icofont-heart-alt"></i> Torneo. All rights reserved</div>
+            <div class="copy-right text-left">© 2018 Torneo. All rights reserved</div>
           </div>
           <div class="col-md-6 col-xs-12">
             <ul class="social-media">
               <li><a href="#" class="icofont icofont-social-facebook"></a></li>
-			  <li><a href="#" class="icofont icofont-social-twitter"></a></li>
-			  <li><a href="#" class="icofont icofont-social-behance"></a></li>
-			  <li><a href="#" class="icofont icofont-social-dribble"></a></li>
-           	  <li><a href="#" class="icofont icofont-social-linkedin"></a></li>
+			  			<li><a href="#" class="icofont icofont-social-instagram"></a></li>
             </ul>
           </div>
         </div>

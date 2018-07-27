@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Galerie;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreGalerie;
+use App\Http\Requests\StoreEditGalerie;
 
 class GalerieController extends Controller
 {
@@ -34,7 +36,7 @@ class GalerieController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreGalerie $request)
     {
         $galerie = new Galerie;
         $galerie->name = $request->name;
@@ -74,7 +76,7 @@ class GalerieController extends Controller
      * @param  \App\Galerie  $galerie
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreEditGalerie $request, $id)
     {
         $galerie = Galerie::find($id);
         $galerie->name = $request->name;
