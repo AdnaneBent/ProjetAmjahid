@@ -90,16 +90,16 @@
       <!--== Collect the nav links, forms, and other content for toggling ==-->
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-right" data-in="fadeIn" data-out="fadeOut">
-          <li class="dropdown"> <a class="hovnav" href="{{route('welcome')}}">Accueil</a>
+          <li class="dropdown"> <a class="hovnav navtextcolor" href="{{route('welcome')}}">Accueil</a>
           
           </li>
-          <li class="dropdown"> <a class="hovnav" href="#">Mes engagements</a>
+          <li class="dropdown"> <a class="hovnav navtextcolor" href="{{route('engagement')}}">Mes engagements</a>
             
           </li>
-          <li class="dropdown"><a class="hovnav" href="{{route('partenaire')}}">Les partenaires</a>
+          <li class="dropdown"><a class="hovnav navtextcolor" href="{{route('partenaire')}}">Les partenaires</a>
 
           </li>
-          <li class="dropdown"> <a class="hovnav" href="#">Presses</a>
+          <li class="dropdown"> <a class="hovnav navtextcolor" href="#">Presses</a>
           
           </li>
         </ul>

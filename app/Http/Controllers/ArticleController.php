@@ -14,7 +14,8 @@ class ArticleController extends Controller
      */
     public function index()
     {
-        //
+        $articles = Article::all();
+        return view("admin.articles.index",compact('articles'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ArticleController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.articles.create",compact('articles'));
     }
 
     /**
@@ -35,7 +36,13 @@ class ArticleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $article = new Article;
+        $article->titre = $request->titre;
+        $article->contenu = $request->contenu;
+        $article->image = $request->image->store('','imgArticle');
+
+        $article->save();
+        return redirect()->route("articles.index");
     }
 
     /**
@@ -46,7 +53,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view("admin.articles.show",compact('article'));
     }
 
     /**
@@ -55,9 +62,11 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article)
+    public function edit($id)
     {
-        //
+         $article = Article::find($id);
+    
+        return view('admin.articles.edit', compact('article'));
     }
 
     /**
@@ -67,9 +76,18 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article)
+    public function update(Request $request, $id)
     {
-        //
+        $article = Article::find($id);
+
+        $article->titre = $request->titre;
+        $article->contenu = $request->contenu;
+        if($request->image != null){
+        $article->image = $request->image->store('','imgArticle');
+        }
+
+        $article->save();
+        return redirect()->route('articles.index',['article'=> $article->id]);
     }
 
     /**
@@ -78,8 +96,10 @@ class ArticleController extends Controller
      * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Article $article)
+    public function destroy($id)
     {
-        //
+        $article = Article::find($id);
+        $article->delete();
+        return redirect()->route('articles.index');
     }
 }

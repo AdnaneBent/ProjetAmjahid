@@ -14,16 +14,17 @@
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-Route::resource('/admin/biographies', 'BiographieController');
-Route::resource('/admin/partenaires', 'PartenaireController');
-Route::resource('/admin/articles', 'ArticleController');
-Route::resource('/admin/carousels', 'CarouselController');
-Route::resource('/admin/palmares', 'PalmaresController');
-Route::resource('/admin/socialNetworks', 'SocialNetworkController');
-Route::resource('/admin/newsletters', 'NewsletterController');
-Route::resource('/admin/engagements', 'EngagementController');
-Route::resource('/admin/galeries', 'GalerieController');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');;
+Route::resource('/admin/biographies', 'BiographieController')->middleware('auth');;
+Route::resource('/admin/partenaires', 'PartenaireController')->middleware('auth');;
+Route::resource('/admin/articles', 'ArticleController')->middleware('auth');;
+Route::resource('/admin/carousels', 'CarouselController')->middleware('auth');;
+Route::resource('/admin/palmares', 'PalmaresController')->middleware('auth');;
+Route::resource('/admin/socialNetworks', 'SocialNetworkController')->middleware('auth');;
+Route::resource('/admin/newsletters', 'NewsletterController')->middleware('auth');;
+Route::resource('/admin/engagements', 'EngagementController')->middleware('auth');;
+Route::resource('/admin/galeries', 'GalerieController')->middleware('auth');;
 
 Route::get('/', 'FrontController@welcome')->name('welcome');
 Route::get('/partenaire', 'FrontController@partenaire')->name('partenaire');
+Route::get('/engagement', 'FrontController@engagement')->name('engagement');

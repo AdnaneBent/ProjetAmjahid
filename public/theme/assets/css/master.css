@@ -11814,5 +11814,9 @@ section.big-block .client-logo {
     color: #be8c3c !important;
 }
 
+.navtextcolor {
+    color: black !important;
+}
+
 
 /* just apply some height and width to the wrapper.*/

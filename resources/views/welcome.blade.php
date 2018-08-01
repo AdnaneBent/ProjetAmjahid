@@ -267,8 +267,8 @@
       <div class="row">
 		      <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.1s">
         	<h2 class="mt-0 mb-0 font-80px textgold">{{$engagement->titre}}</h2
-        	<p class="mt-30 font-300 font-16px">{!!$engagement->contenu!!}</p>
-          <p class="mt-30"><a class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
+        	<p class="mt-30 font-300 font-16px">{!!$description = substr($engagement->contenu, 0, 300)!!} ...</p>
+          <p class="mt-30"><a href="{{route('engagement')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
         </div>
         <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.2s">
         	<figure class=" mt-30"><img src="{{Storage::disk('imgEngagement')->url($engagement->image)}}" alt="{{$engagement->titre}}" alt="">
@@ -287,13 +287,13 @@
     	<div class="row">
         <div class="col-md-12">
           <div id="portfolio-gallery" class="cbp container">
-						@foreach($galeries as $galerie)
+				@foreach($galeries as $galerie)
                 <div class="cbp-item branding col-md-3 col-sm-3 with-spacing">
                   <figure class="mg-image">
                     <img src="{{Storage::disk('imgGalerie')->url($galerie->image)}}" alt="{{$galerie->name}}" alt="">
                   </figure>
-								</div>
-								@endforeach
+				</div>
+				@endforeach
             	</div>
             </div>
         </div>
