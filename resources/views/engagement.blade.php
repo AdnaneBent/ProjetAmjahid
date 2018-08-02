@@ -16,13 +16,13 @@
           
           <!-- Wrapper for slides -->
           <div style="height:600px" class="carousel-inner container-fluid" role="listbox">
-            @foreach( $carousels as $carousel )
+            @foreach($carousels as $carousel)
             <div class="item {{ $loop->first ? ' active' : '' }}" >
-                    <img class="img-responsive" src="{{Storage::disk('imgCarousel')->url($carousel->image)}}" alt="{{$carousel->name}}" alt="">
+                    <img src="{{Storage::disk('imgCarousel')->url($carousel->image)}}" alt="{{$carousel->name}}" alt="">
                 </div>
             @endforeach
         </div>
-        
+
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
         </a>

@@ -4,9 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use Illuminate\Http\Request;
+use App\Services\imageResize;
+use Storage;
+use Image;
+
 
 class ArticleController extends Controller
 {
+
+    public function __construct(ImageResize $imageResize){
+        $this->imageResize = $imageResize;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -39,7 +47,14 @@ class ArticleController extends Controller
         $article = new Article;
         $article->titre = $request->titre;
         $article->contenu = $request->contenu;
-        $article->image = $request->image->store('','imgArticle');
+        $request->image->store('', 'imgArticleShow');
+        $image = [
+            "name" => $request->image,
+            "disk" => "imgArticle",
+            "w" => 200,
+            "h" => 200
+        ];
+        $article->image = $this->imageResize->imageStore($image);
 
         $article->save();
         return redirect()->route("articles.index");
@@ -82,8 +97,20 @@ class ArticleController extends Controller
 
         $article->titre = $request->titre;
         $article->contenu = $request->contenu;
-        if($request->image != null){
-        $article->image = $request->image->store('','imgArticle');
+        $request->image->store('', 'imgArticleShow');
+       if ($request->image != null)
+        {
+            Storage::disk('imgArticle')->delete($article->image);
+           
+    
+            $image = [
+                "name" => $request->image,
+                "disk" => "imgArticle",
+                "w" => 200,
+                "h" => 200
+            ];
+            $article->image = $this->imageResize->imageStore($image);
+            
         }
 
         $article->save();

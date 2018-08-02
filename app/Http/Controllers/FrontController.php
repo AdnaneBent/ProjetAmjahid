@@ -8,6 +8,8 @@ use App\Galerie;
 use App\Engagement;
 use App\Partenaire;
 use App\Carousel;
+use App\Article;
+use App\Header;
 
 class FrontController extends Controller
 {
@@ -15,7 +17,8 @@ class FrontController extends Controller
         $biographie = Biographie::first();
         $galeries= Galerie::all();
         $engagement = Engagement::first();
-        return view("welcome",compact('biographie','engagement','galeries'));
+        $header = Header::first();
+        return view("welcome",compact('biographie','engagement','galeries','header'));
     }
 
     public function partenaire(){
@@ -31,4 +34,14 @@ class FrontController extends Controller
         $carousels = Carousel::all();
         return view("engagement",compact('engagement','carousels'));
     }
+
+     public function article(){
+        $articles = Article::orderBy("created_at", 'DESC')->paginate(4);
+        return view("presse",compact('articles'));
+    }
+
+    public function articleShow(Article $article){
+        return view("presseshow",compact('article'));
+    }
+    
 }

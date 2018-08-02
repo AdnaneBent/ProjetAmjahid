@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSocialNetworksTable extends Migration
+class CreateHeadersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateSocialNetworksTable extends Migration
      */
     public function up()
     {
-        Schema::create('social_networks', function (Blueprint $table) {
+        Schema::create('headers', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 45);
-            $table->string('link', 100);
+            $table->string('titre', 60);
+            $table->string('imageAV', 45);
+            $table->string('imageBG', 45);
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateSocialNetworksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('social_networks');
+        Schema::dropIfExists('headers');
     }
 }

@@ -90,6 +90,25 @@ return [
             'url' => env('APP_URL').'/storage/imgArticle',
             'visibility' => 'public',
         ],
+         'imgArticleShow' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/imgArticleShow'),
+            'url' => env('APP_URL').'/storage/imgArticleShow',
+            'visibility' => 'public',
+        ],
+        'imgHeaderAV' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/imgHeaderAV'),
+            'url' => env('APP_URL').'/storage/imgHeaderAV',
+            'visibility' => 'public',
+        ],
+        'imgHeaderBG' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/imgHeaderBG'),
+            'url' => env('APP_URL').'/storage/imgHeaderBG',
+            'visibility' => 'public',
+        ],
+        
 
         's3' => [
             'driver' => 's3',

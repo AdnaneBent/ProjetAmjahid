@@ -5,9 +5,15 @@ namespace App\Http\Controllers;
 use App\Carousel;
 use Storage;
 use Illuminate\Http\Request;
+use Image;
+use App\Services\imageResize;
 
 class CarouselController extends Controller
 {
+
+    public function __construct(ImageResize $imageResize){
+        $this->imageResize = $imageResize;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -39,7 +45,13 @@ class CarouselController extends Controller
     {
         $carousel = new Carousel;
         $carousel->name = $request->name;
-        $carousel->image = $request->image->store('','imgCarousel');
+        $image = [
+            "name" => $request->image,
+            "disk" => "imgCarousel",
+            "w" => 500,
+            "h" => 500
+        ];
+         $carousel->image = $this->imageResize->imageStore($image);
 
         $carousel->save();
         return redirect()->route("carousels.index");
@@ -79,9 +91,13 @@ class CarouselController extends Controller
     {
         $carousel = Carousel::find($id);
         $carousel->name = $request->name;
-        if($request->image != null){
-        $carousel->image = $request->image->store('','imgCarousel');
-        }
+         $image = [
+            "name" => $request->image,
+            "disk" => "imgCarousel",
+            "w" => 500,
+            "h" => 500
+        ];
+         $carousel->image = $this->imageResize->imageStore($image);
         $carousel->save();
         return redirect()->route('carousels.index',['carousel'=> $carousel->id]);
     }

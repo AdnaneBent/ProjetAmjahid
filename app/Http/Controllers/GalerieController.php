@@ -6,9 +6,14 @@ use App\Galerie;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreGalerie;
 use App\Http\Requests\StoreEditGalerie;
+use Storage;
+use App\Services\imageResize;
 
 class GalerieController extends Controller
 {
+     public function __construct(ImageResize $imageResize){
+        $this->imageResize = $imageResize;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -40,7 +45,19 @@ class GalerieController extends Controller
     {
         $galerie = new Galerie;
         $galerie->name = $request->name;
-        $galerie->image = $request->image->store('','imgGalerie');
+       if ($request->image != null)
+        {
+            Storage::disk('imgGalerie')->delete($galerie->image);
+           
+    
+            $image = [
+                "name" => $request->image,
+                "disk" => "imgGalerie",
+                "w" => 1000,
+                "h" => 1000
+            ];
+            $galerie->image = $this->imageResize->imageStore($image);
+        }
 
         $galerie->save();
         return redirect()->route("galeries.index");
@@ -80,8 +97,18 @@ class GalerieController extends Controller
     {
         $galerie = Galerie::find($id);
         $galerie->name = $request->name;
-        if($request->image != null){
-        $galerie->image = $request->image->store('','imgGalerie');
+        if ($request->image != null)
+        {
+            Storage::disk('imgGalerie')->delete($galerie->image);
+           
+    
+            $image = [
+                "name" => $request->image,
+                "disk" => "imgGalerie",
+                "w" => 1000,
+                "h" => 1000
+            ];
+            $galerie->image = $this->imageResize->imageStore($image);
         }
         $galerie->save();
         return redirect()->route('galeries.index',['galerie'=> $galerie->id]);

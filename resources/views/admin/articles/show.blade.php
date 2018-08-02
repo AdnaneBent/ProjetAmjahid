@@ -19,7 +19,7 @@
 
             {{-- Debut du contenu des articles --}}
             <div class="box-body">
-                <h3>Contenu : <br>{!!$article->contenu!!}</h3>
+                <h3>Contenu de l'article : <br>{!!$article->contenu!!}</h3>
             </div>
             {{-- Fin du contenu de l'article --}}
             <div class="row">

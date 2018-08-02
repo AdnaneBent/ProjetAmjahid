@@ -8,7 +8,7 @@
     <ul>	<!-- SLIDE  -->
     	<li data-index="rs-896" data-transition="fade" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="300"  data-rotate="0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
     		<!-- MAIN IMAGE -->
-    		<img src="{{asset('theme/assets/images/mountainscene.jpg')}}"  alt=""  data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Power4.easeOut" data-scalestart="150" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="20" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
+    		<img src="{{Storage::disk('imgHeaderBG')->url($header->imageBG)}}" alt="{{$header->titre}}" alt=""  data-bgposition="center center" data-kenburns="on" data-duration="5000" data-ease="Power4.easeOut" data-scalestart="150" data-scaleend="100" data-rotatestart="0" data-rotateend="0" data-blurstart="20" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg" data-no-retina>
     		<!-- LAYERS -->
 
     		<!-- LAYER NR. 1 -->
@@ -33,7 +33,7 @@
     			data-paddingbottom="[0,0,0,0]"
     			data-paddingleft="[10,10,10,10]"
 
-    			style="z-index: 5; white-space: nowrap; font-size: 150px; line-height: 120px; font-weight: 700; color: #ffffff; letter-spacing: -10px;font-family: 'Montserrat', sans-serif;">Amal Amjahid </div>
+    			style="z-index: 5; white-space: nowrap; font-size: 150px; line-height: 120px; font-weight: 700; color: #ffffff; letter-spacing: -10px;font-family: 'Montserrat', sans-serif;">{{$header->titre}}</div>
 
     		<!-- LAYER NR. 2 -->
     		<div class="tp-caption   tp-resizeme"
@@ -54,7 +54,7 @@
     			data-paddingbottom="[0,0,0,0]"
     			data-paddingleft="[0,0,0,0]"
 
-    			style="z-index: 6;"><img src="{{asset('theme/assets/images/mountainpng-1.png')}}" alt="" data-ww="['1050px','1050px','861','689px']" data-hh="['610px','610px','500px','400px']" width="1050" height="610" data-no-retina> </div>
+    			style="z-index: 6;"><img src="{{Storage::disk('imgHeaderAV')->url($header->imageAV)}}" alt="{{$header->titre}}" alt="" data-ww="['1050px','1050px','861','689px']" data-hh="['610px','610px','500px','400px']" width="1050" height="610" data-no-retina> </div>
 
     		<!-- LAYER NR. 3 -->
     		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme"

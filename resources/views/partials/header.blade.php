@@ -72,13 +72,6 @@
     </div>
     <!--== End Top Search ==-->
     <div class="container">
-      <!--== Start Atribute Navigation ==-->
-      <div class="attr-nav hidden-xs sm-display-none">
-        <ul class="social-media-dark social-top">
-          <li class="search"><a href="#" id="search-button"><i class="icofont icofont-search"></i></a></li>
-        </ul>
-      </div>
-      <!--== End Atribute Navigation ==-->
 
       <!--== Start Header Navigation ==-->
       <div class="navbar-header">
@@ -99,7 +92,7 @@
           <li class="dropdown"><a class="hovnav navtextcolor" href="{{route('partenaire')}}">Les partenaires</a>
 
           </li>
-          <li class="dropdown"> <a class="hovnav navtextcolor" href="#">Presses</a>
+          <li class="dropdown"> <a class="hovnav navtextcolor" href="{{route('presse')}}">Presses</a>
           
           </li>
         </ul>

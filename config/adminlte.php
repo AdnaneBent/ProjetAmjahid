@@ -114,6 +114,11 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
+         [
+            'text'        => 'Headers',
+            'url'         => 'admin/headers',
+            'icon'        => 'image',
+        ],
         [
             'text'        => 'Biographies',
             'url'         => 'admin/biographies',
@@ -144,7 +149,7 @@ return [
             'url'         => 'admin/engagements',
             'icon'        => 'file',
         ],
-         [
+        [
             'text'        => 'Galerie',
             'url'         => 'admin/galeries',
             'icon'        => 'image',
