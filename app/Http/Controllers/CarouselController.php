@@ -48,8 +48,8 @@ class CarouselController extends Controller
         $image = [
             "name" => $request->image,
             "disk" => "imgCarousel",
-            "w" => 500,
-            "h" => 500
+            "w" => 1100,
+            "h" => 700
         ];
          $carousel->image = $this->imageResize->imageStore($image);
 
@@ -94,8 +94,8 @@ class CarouselController extends Controller
          $image = [
             "name" => $request->image,
             "disk" => "imgCarousel",
-            "w" => 500,
-            "h" => 500
+            "w" => 1100,
+            "h" => 700
         ];
          $carousel->image = $this->imageResize->imageStore($image);
         $carousel->save();

@@ -12,23 +12,31 @@
     </div>
     <br>
  
-      <div id="carousel-example-generic" class="carousel slide container" data-ride="carousel">
-          
-          <!-- Wrapper for slides -->
-          <div style="height:600px" class="carousel-inner container-fluid" role="listbox">
+      
+
+    <!-- Carousel container -->
+    <div id="my-pics" class="carousel slide" data-ride="carousel" style="width:1000px;margin:auto;">
+
+<!-- Content -->
+        <div class="carousel-inner" role="listbox">
             @foreach($carousels as $carousel)
             <div class="item {{ $loop->first ? ' active' : '' }}" >
-                    <img src="{{Storage::disk('imgCarousel')->url($carousel->image)}}" alt="{{$carousel->name}}" alt="">
-                </div>
+                <img src="{{Storage::disk('imgCarousel')->url($carousel->image)}}" alt="{{$carousel->name}}" alt="">
+            </div>
             @endforeach
+
         </div>
 
-        <!-- Controls -->
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+<!-- Previous/Next controls -->
+        <a class="left carousel-control" href="#my-pics" role="button" data-slide="prev">
+        <span aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
         </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            
+        <a class="right carousel-control" href="#my-pics" role="button" data-slide="next">
+        <span aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
         </a>
+
     </div>
 </section>
     
