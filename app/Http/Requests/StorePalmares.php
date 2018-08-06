@@ -24,7 +24,7 @@ class StorePalmares extends FormRequest
     public function rules()
     {
         return [
-            'annee'  =>  "required|max:4|numeric",
+            'annee'  =>  "required|max:2999|numeric",
             'competition' => 'required|max:255',
             'resultat' => 'required|max:255',
             'categorie' => 'required|max:255',
@@ -33,8 +33,8 @@ class StorePalmares extends FormRequest
         ];
     }
 
-        public  function  messages()
-        {
+    public  function  messages()
+    {
         return[
         'annee.required'  =>  "Le champ ne peut pas être vide",
         'annee.numeric' => "Il faut des chiffres",
@@ -45,6 +45,6 @@ class StorePalmares extends FormRequest
         'resultat.max' => "Maximum :max caractères",
         'categorie.required' => "Il faut une categorie",
         'categorie.max' => "Maximum :max caractères",
-            ];
+        ];
     }
 }

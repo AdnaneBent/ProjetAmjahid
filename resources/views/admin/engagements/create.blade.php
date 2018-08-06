@@ -1,29 +1,36 @@
 @extends('adminlte::page')
 
-@section('title', 'Engagement')
+@section('title', 'engagement')
 
 @section('content_header')
-<h1>Création des engagements</h1>
+<h1>Création de mes engagements</h1>
 @stop
 
   @section('content')
   <form action="{{route('engagements.store')}}" method="post" enctype="multipart/form-data">
-
   @csrf
-    <div>
-        <label for="titre">
-        Titre :<br>
-        @if($errors->has('titre'))
-            <div class="text-danger">{{ $errors->first('titre')}}</div>
-        @endif
-        <input type="text" name="titre" value="{{old('titre')}}">
-        </label><br>
-        <h5>Contenu</h5>
-        @if($errors->has('contenu'))
+  <div class="box box-primary">
+    <!-- form start -->
+    <form role="form">
+      <div class="box-body">
+        <div class="form-group">
+          {{-- Titre --}}
+          <label for="titre">Titre</label>
+          @if($errors->has('titre'))
+          <div class="text-danger">{{ $errors->first('titre')}}</div>
+          @endif
+          <input type="text" name="titre" class="form-control" value="{{old('titre')}}" placeholder="Titre" >
+        </div>
+        {{-- contenu --}}
+        <div class="form-group">
+          <h5>Contenu</h5>
+          @if($errors->has('contenu'))
           <div class="text-danger">{{ $errors->first('contenu')}}</div>
-        @endif
-        <textarea id="hello" name="contenu" for="contenu">{{old('contenu')}}</textarea>
-        <br>
+          @endif
+          <textarea id="hello" name="contenu" for="contenu">{{old('contenu')}}</textarea>
+          </textarea>
+        </div>
+        {{-- image --}}
         <h5>Image</h5>
         <img src="" alt="">
         @if($errors->has('image'))
@@ -31,17 +38,19 @@
         @endif
         <input class="pb-2" name="image" type="file"><br>
         <br>
-        <button type="submit" class="btn btn-info">Enregistrer</button>
-    </div><br>
-    <div class="card-body">
-      <a href="#" class="card-link"><a href="{{route('engagements.index')}}"  class="btn btn-info">Retour</a>
-    </div>
+        <button type="submit" style="background-color:#be8c3c;" class="btn btnAdmin">Enregistrer</button>
+      </div>
+      <div class="card-body">
+        <a href="{{route('engagements.index')}}" class="btn card-link" style="background-color:#be8c3c;color:black;">Retour</a>
+      </div>
+      <!-- /.box-body -->
+    </form>
+  </div>
 
-  </form>
-
-  @section('js')
+   @section('js')
   <script>
     CKEDITOR.replace('hello');
   </script>
   @endsection
+
 @endsection

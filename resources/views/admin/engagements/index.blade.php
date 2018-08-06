@@ -5,9 +5,9 @@
 @section('content')
 
 <h2>Les engagements</h2>
-<div class="container">
+{{-- <div class="container">
     <a class="btn btn-dark" href="{{route('engagements.create')}}">Ajouter les engagements</a>
-</div>
+</div> --}}
 
 <div class="text-center">
     <div class="row justify-content-around">
@@ -20,13 +20,13 @@
                 <h3>contenu : <br>{!!$engagement->contenu!!}</h3>
             </div>
             <div class="card-body">
-                <a class="btn btn-primary" href="{{route('engagements.edit',['id'=>$engagement->id])}}">Edité</a>
+                <a class="btn btn-primary" style="background-color:#be8c3c;color:black;" href="{{route('engagements.edit',['id'=>$engagement->id])}}">Edité</a>
             </div>
-            <form action="{{route('engagements.destroy',['engagement'=>$engagement->id])}}" method="post">
+            {{-- <form action="{{route('engagements.destroy',['engagement'=>$engagement->id])}}" method="post">
                 @method('DELETE')
                 @csrf
                 <button type="submit" class="btn btn-danger">Supprimer</button>
-            </form>
+            </form> --}}
         </div>
         @endforeach
     </div>

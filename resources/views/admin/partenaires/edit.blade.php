@@ -3,30 +3,42 @@
 @section('title', 'Partenaire')
 
 @section('content_header')
-<h1>Modification du partenaire</h1>
+<h1>Modification d'un partenaire</h1>
 @stop
 
   @section('content')
   <form action="{{route('partenaires.update',['partenaire'=>$partenaire->id])}}" method="POST" enctype="multipart/form-data">
   @method('PATCH')
   @csrf
-    <div>
-      <label for="name">
-        Nom du partenaire<br>
-        @if($errors->has('name'))
+  <div class="box box-primary">
+    <!-- form start -->
+    <form role="form">
+      <div class="box-body">
+        <div class="form-group">
+          {{-- name --}}
+          <label for="name">Nom du partenaire</label>
+          @if($errors->has('name'))
           <div class="text-danger">{{ $errors->first('name')}}</div>
+          @endif
+          <input type="text" name="name" class="form-control" value="{{old('name', $partenaire->name)}}" placeholder="Nom" >
+        </div>
+        {{-- image --}}
+        <h5>Image</h5>
+        <img src="" alt="">
+        @if($errors->has('image'))
+            <div class="text-danger">{{ $errors->first('image')}}</div>
         @endif
-        <input type="text" name="name" value="{{old('name', $partenaire->name)}}">
-      </label><br>
+        <input class="pb-2" name="image" type="file"><br>
         <br>
-      <img src="" alt="">
-      <input class="pb-2" name="image" type="file"><br>
-      <br>
-      <button type="submit" class="btn btn-info">Enregistrer</button>
-    </div>
-    <div class="card-body">
-      <a href="#" class="card-link"><a href="{{route('partenaires.index')}}"  class="btn btn-info">Retour</a>
-    </div>
+        <button type="submit" style="background-color:#be8c3c;" class="btn btnAdmin">Enregistrer</button>
+      </div>
+      <div class="card-body">
+        <a href="{{route('partenaires.index')}}" class="btn card-link" style="background-color:#be8c3c;color:black;">Retour</a>
+      </div>
+      <!-- /.box-body -->
+    </form>
+  </div>
 
-  </form>
+
+
 @endsection

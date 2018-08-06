@@ -3,28 +3,34 @@
 @section('title', 'header')
 
 @section('content_header')
-<h1>Création d'un contenu pour le header</h1>
+<h1>Création d'une image pour la header</h1>
 @stop
 
   @section('content')
   <form action="{{route('headers.store')}}" method="post" enctype="multipart/form-data">
-
+  @method('POST')
   @csrf
-    <div>
-        <label for="titre">
+  <div class="box box-primary">
+    <!-- form start -->
+    <form role="form">
+      <div class="box-body">
+        <div class="form-group">
+          {{-- name --}}
+          <label for="titre">
         Titre :<br>
         @if($errors->has('titre'))
             <div class="text-danger">{{ $errors->first('titre')}}</div>
         @endif
         <input type="text" name="titre" value="{{old('titre')}}">
-        </label><br>
-        <br>
+        </label>
+        {{-- image --}}
         <h5>Image Avant plan</h5>
         <img src="" alt="">
         @if($errors->has('imageAV'))
             <div class="text-danger">{{ $errors->first('imageAV')}}</div>
         @endif
-        <input class="pb-2" name="imageAV" type="file">
+        <input class="pb-2" name="imageAV" type="file"><br>
+        <br>
          <h5>Image background</h5>
         <img src="" alt="">
         @if($errors->has('imageBG'))
@@ -32,12 +38,14 @@
         @endif
         <input class="pb-2" name="imageBG" type="file"><br>
         <br>
-        <button type="submit" class="btn btn-info">Enregistrer</button>
-    </div><br>
-    <div class="card-body">
-      <a href="#" class="card-link"><a href="{{route('headers.index')}}"  class="btn btn-info">Retour</a>
-    </div>
+        <button type="submit" style="background-color:#be8c3c;" class="btn btnAdmin">Enregistrer</button>
+      </div>
+      <div class="card-body">
+        <a href="{{route('headers.index')}}" class="btn card-link" style="background-color:#be8c3c;color:black;">Retour</a>
+      </div>
+      <!-- /.box-body -->
+    </form>
+  </div>
 
-  </form>
 
 @endsection

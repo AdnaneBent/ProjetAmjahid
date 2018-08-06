@@ -4,28 +4,37 @@
 
 @section('content')
 
-<h2>Les articles</h2>
-<div class="container">
-    <a class="btn btn-dark" href="{{route('articles.create')}}">Ajouter un article</a>
-</div>
-
-<div class="text-center">
-    <div class="row justify-content-around">
-    @foreach($articles as $article)
-    <div class="card col-3 m-4" style="width: 18rem;">
-        <h3>Nom de l'article : {{$article->titre}}</h3>
-        <img class="card-img-top mt-2" src="{{Storage::disk('imgArticle')->url($article->image)}}" alt="Card image cap">
-            {{-- Contenu --}}
-            <div class="card-body">
-                <h3>Contenu de l'article : <br>{!!$description = substr($article->contenu, 0, 300)!!} ...</h3>
+<div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Les articles</h3>
+              <div class="box-tools"
+              </div>
             </div>
-            {{-- Fin contenu --}}
-            <div class="card-body">
-                <a class="btn btn-primary" href="{{route('articles.show',['article'=>$article->id])}}">Voir</a>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+                <table class="table table-hover">
+                        @foreach($articles as $article)
+                <tbody><tr>
+                  <th>Titre</th>
+                  <th>Date</th>
+                  <th>Contenu</th>
+                  <th>Action</th>
+                </tr>
+                <tr>
+                <td> {{$article->titre}}</td>
+                  <td>{{$article->created_at->format('d m y')}}</td>
+                  <td>{!!$description = substr($article->contenu, 0, 150)!!} ...</td>
+                  <td><a class="btn btn-primary" style="background-color:#be8c3c;color:black;" href="{{route('articles.show',['article'=>$article->id])}}">Voir</a></td>
+                </tr>
+                @endforeach
+              </tbody></table>
             </div>
+            <!-- /.box-body -->
         </div>
-        @endforeach
-    </div>
-</div>
+          <!-- /.box -->
+        </div>
+      </div>
 
-@endsection
+      @endsection

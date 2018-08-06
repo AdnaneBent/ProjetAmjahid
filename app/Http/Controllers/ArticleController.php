@@ -97,12 +97,11 @@ class ArticleController extends Controller
 
         $article->titre = $request->titre;
         $article->contenu = $request->contenu;
-        $request->image->store('', 'imgArticleShow');
-       if ($request->image != null)
+        if ($request->image != null)
         {
+            $request->image->store('', 'imgArticleShow');
             Storage::disk('imgArticle')->delete($article->image);
            
-    
             $image = [
                 "name" => $request->image,
                 "disk" => "imgArticle",

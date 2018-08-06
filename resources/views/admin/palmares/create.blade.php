@@ -1,16 +1,20 @@
 @extends('adminlte::page')
 
-@section('title', 'Palmares')
+@section('title', 'palmare')
 
-@section('content_header')
-<h1>Création du palmares</h1>
+@section('content_palmare')
+<h1>Création d'une image pour la palmare</h1>
 @stop
 
   @section('content')
   <form action="{{route('palmares.store')}}" method="post" enctype="multipart/form-data">
-
+  @method('POST')
   @csrf
-    <div>
+  <div class="box box-primary">
+    <!-- form start -->
+      <div class="box-body">
+        <div class="form-group">
+          {{-- name --}}
         <label for="annee">
         L'année de la compétition<br>
         @if($errors->has('annee'))
@@ -42,12 +46,14 @@
         @endif
         <input type="text" name="categorie" value="{{old('categorie')}}">
         </label><br>
-
-        <button type="submit" class="btn btn-info">Enregistrer</button>
-    </div><br>
-    <div class="card-body">
-      <a href="#" class="card-link"><a href="{{route('palmares.index')}}"  class="btn btn-info">Retour</a>
+        <button type="submit" style="background-color:#be8c3c;" class="btn btnAdmin">Enregistrer</button>
+      
+      <div class="card-body">
+        <a href="{{route('palmares.index')}}" class="btn card-link" style="background-color:#be8c3c;color:black;">Retour</a>
+      </div>
+      <!-- /.box-body -->
     </div>
+    </form>
 
-  </form>
+
 @endsection

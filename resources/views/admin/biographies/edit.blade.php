@@ -6,34 +6,52 @@
 <h1>Modification de la biographie</h1>
 @stop
 
-  @section('content')
+   @section('content')
   <form action="{{route('biographies.update',['biographie'=>$biographie->id])}}" method="POST" enctype="multipart/form-data">
   @method('PATCH')
   @csrf
-    <div>
-      <label for="titre">
-        titre de la biographie<br>
-        @if($errors->has('titre'))
+  <div class="box box-primary">
+    <!-- form start -->
+    <form role="form">
+      <div class="box-body">
+        <div class="form-group">
+          {{-- Titre --}}
+          <label for="titre">Titre</label>
+          @if($errors->has('titre'))
           <div class="text-danger">{{ $errors->first('titre')}}</div>
-        @endif
-        <input type="text" name="titre" value="{{old('titre', $biographie->titre)}}">
-      </label><br>
-      <label for="contenu">  
-        <h5>Contenu :</h5>
-        @if($errors->has('contenu'))
+          @endif
+          <input type="text" name="titre" class="form-control" value="{{old('titre', $biographie->titre)}}" placeholder="Titre" >
+        </div>
+        {{-- contenu --}}
+        <div class="form-group">
+          <h5>Contenu</h5>
+          @if($errors->has('contenu'))
           <div class="text-danger">{{ $errors->first('contenu')}}</div>
+          @endif
+          <textarea id="hello" name="contenu" for="contenu">{{old('contenu', $biographie->contenu)}}</textarea>
+          </textarea>
+        </div>
+        {{-- image --}}
+        <h5>Image</h5>
+        <img src="" alt="">
+        @if($errors->has('image'))
+            <div class="text-danger">{{ $errors->first('image')}}</div>
         @endif
-        <textarea id="hello" name="contenu">{{old('contenu', $biographie->contenu)}}</textarea>
-        </label>
+        <input class="pb-2" name="image" type="file"><br>
         <br>
-      <img src="" alt="">
-      <input class="pb-2" name="image" type="file"><br>
-      <br>
-      <button type="submit" class="btn btn-info">Enregistrer</button>
-    </div>
-    <div class="card-body">
-      <a href="#" class="card-link"><a href="{{route('biographies.index')}}"  class="btn btn-info">Retour</a>
-    </div>
+        <button type="submit" style="background-color:#be8c3c;" class="btn btnAdmin">Enregistrer</button>
+      </div>
+      <div class="card-body">
+        <a href="{{route('biographies.index')}}" class="btn card-link" style="background-color:#be8c3c;color:black;">Retour</a>
+      </div>
+      <!-- /.box-body -->
+    </form>
+  </div>
 
-  </form>
+   @section('js')
+  <script>
+    CKEDITOR.replace('hello');
+  </script>
+  @endsection
+
 @endsection

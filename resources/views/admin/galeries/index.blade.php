@@ -16,15 +16,12 @@
             <h3>{{$galerie->name}}</h3>
             <img class="card-img-top mt-2" src="{{Storage::disk('imgGalerie')->url($galerie->image)}}" alt="Card image cap">
             <div class="card-body">
-                <h3>l'image de la galerie</h3><br>
-            </div>
-            <div class="card-body">
-                <a class="btn btn-primary" href="{{route('galeries.edit',['galerie'=>$galerie->id])}}">Edité</a>
+                <a class="btn btn-primary" style="background-color:#be8c3c;color:black;" href="{{route('galeries.edit',['galerie'=>$galerie->id])}}">Edité</a>
             </div>
             <form action="{{route('galeries.destroy',['galerie'=>$galerie->id])}}" method="post">
                 @method('DELETE')
                 @csrf
-                <button type="submit" class="btn btn-danger">Supprimer</button>
+                <button type="submit" style="background-color:#be8c3c;color:black;" class="btn btn-danger">Supprimer</button>
             </form>
         </div>
         @endforeach

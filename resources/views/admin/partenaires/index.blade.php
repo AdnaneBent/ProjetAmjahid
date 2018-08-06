@@ -16,12 +16,12 @@
             <h3>Nom du partenaire : <br><h2>{{$partenaire->name}}</h2></h3>
             <img class="card-img-top mt-2" src="{{Storage::disk('imgPartenaire')->url($partenaire->image)}}" alt="Card image cap">
             <div class="card-body">
-                <a class="btn btn-primary" href="{{route('partenaires.edit',['id'=>$partenaire->id])}}">Edité</a>
+                <a class="btn btn-primary" style="background-color:#be8c3c;color:black;" href="{{route('partenaires.edit',['id'=>$partenaire->id])}}">Edité</a>
             </div>
             <form action="{{route('partenaires.destroy',['partenaire'=>$partenaire->id])}}" method="post">
                 @method('DELETE')
                 @csrf
-                <button type="submit" class="btn btn-danger">Supprimer</button>
+                <button style="background-color:#be8c3c;color:black;" type="submit" class="btn btn-danger">Supprimer</button>
             </form>
         </div>
         @endforeach

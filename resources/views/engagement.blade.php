@@ -11,8 +11,6 @@
         </div>
     </div>
     <br>
- 
-      
 
     <!-- Carousel container -->
     <div id="my-pics" class="carousel slide" data-ride="carousel" style="width:1000px;margin:auto;">

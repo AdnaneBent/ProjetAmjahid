@@ -91,13 +91,21 @@ class CarouselController extends Controller
     {
         $carousel = Carousel::find($id);
         $carousel->name = $request->name;
-         $image = [
-            "name" => $request->image,
-            "disk" => "imgCarousel",
-            "w" => 1100,
-            "h" => 700
-        ];
-         $carousel->image = $this->imageResize->imageStore($image);
+         if ($request->image != null)
+        {
+            Storage::disk('imgCarousel')->delete($carousel->image);
+           
+    
+            $image = [
+                "name" => $request->image,
+                "disk" => "imgcarousel",
+                "w" => 1100,
+                "h" => 700
+            ];
+            $carousel->image = $this->imageResize->imageStore($image);
+        }
+
+
         $carousel->save();
         return redirect()->route('carousels.index',['carousel'=> $carousel->id]);
     }

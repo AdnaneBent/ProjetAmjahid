@@ -8,16 +8,20 @@
 
   @section('content')
   <form action="{{route('partenaires.store')}}" method="post" enctype="multipart/form-data">
-
   @csrf
-    <div>
-        <label for="name">
-        name :<br>
-        @if($errors->has('name'))
-            <div class="text-danger">{{ $errors->first('name')}}</div>
-        @endif
-        <input type="text" name="name" value="{{old('name')}}">
-        </label><br>
+  <div class="box box-primary">
+    <!-- form start -->
+    <form role="form">
+      <div class="box-body">
+        <div class="form-group">
+          {{-- name --}}
+          <label for="name">Nom du partenaire</label>
+          @if($errors->has('name'))
+          <div class="text-danger">{{ $errors->first('name')}}</div>
+          @endif
+          <input type="text" name="name" class="form-control" value="{{old('name')}}" placeholder="Nom" >
+        </div>
+        {{-- image --}}
         <h5>Image</h5>
         <img src="" alt="">
         @if($errors->has('image'))
@@ -25,11 +29,14 @@
         @endif
         <input class="pb-2" name="image" type="file"><br>
         <br>
-        <button type="submit" class="btn btn-info">Enregistrer</button>
-    </div><br>
-    <div class="card-body">
-      <a href="#" class="card-link"><a href="{{route('partenaires.index')}}"  class="btn btn-info">Retour</a>
-    </div>
+        <button type="submit" style="background-color:#be8c3c;" class="btn btnAdmin">Enregistrer</button>
+      </div>
+      <div class="card-body">
+        <a href="{{route('partenaires.index')}}" class="btn card-link" style="background-color:#be8c3c;color:black;">Retour</a>
+      </div>
+      <!-- /.box-body -->
+    </form>
+  </div>
 
-  </form>
+
 @endsection
