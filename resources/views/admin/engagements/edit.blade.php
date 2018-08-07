@@ -39,10 +39,10 @@
         @endif
         <input class="pb-2" name="image" type="file"><br>
         <br>
-        <button type="submit" style="background-color:#be8c3c;" class="btn btnAdmin">Enregistrer</button>
+        <button type="submit" style="background-color:#be8c3c;color:white;" class="btn btnAdmin">Enregistrer</button>
       </div>
       <div class="card-body">
-        <a href="{{route('engagements.index')}}" class="btn card-link" style="background-color:#be8c3c;color:black;">Retour</a>
+        <a href="{{route('engagements.index')}}" class="btn card-link" style="background-color:#be8c3c;color:white;">Retour</a>
       </div>
       <!-- /.box-body -->
     </form>

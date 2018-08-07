@@ -4,32 +4,33 @@
 
 @section('content')
 
-<h2>Les engagements</h2>
+<h2>La engagement</h2>
 {{-- <div class="container">
-    <a class="btn btn-dark" href="{{route('engagements.create')}}">Ajouter les engagements</a>
+    <a class="btn btn-dark" href="{{route('engagements.create')}}">Ajouter la engagement</a>
 </div> --}}
-
-<div class="text-center">
-    <div class="row justify-content-around">
-    @foreach($engagements as $engagement)
-        <div class="card col-3 m-4" style="width: 18rem;">
-
-            <h3>Titre : {{$engagement->titre}}</h3>
-            <img class="card-img-top mt-2" src="{{Storage::disk('imgEngagement')->url($engagement->image)}}" alt="Card image cap">
-            <div class="card-body">
-                <h3>contenu : <br>{!!$engagement->contenu!!}</h3>
+    <div class="box box-primary">
+        <div class="box-body box-profile">
+            @foreach($engagements as $engagement)
+            <div class="text-center">
+                <img class="profile-user-img img-responsive img-circle" style="width:20%;" src="{{Storage::disk('imgEngagement')->url($engagement->image)}}" alt="Card image cap">
             </div>
+                
+            <h3 class="profile-username text-center"> {{$engagement->titre}}</h3>
+            <br>
             <div class="card-body">
-                <a class="btn btn-primary" style="background-color:#be8c3c;color:black;" href="{{route('engagements.edit',['id'=>$engagement->id])}}">Edité</a>
+                <h3>Mes engagements :<br>
+                <br>    
+                {!!$engagement->contenu!!}</h3>
+            </div>
+             <div class="card-body">
+                <a class="btn" style="background-color:#be8c3c;color:white;" href="{{route('engagements.edit',['id'=>$engagement->id])}}">Edité</a>
             </div>
             {{-- <form action="{{route('engagements.destroy',['engagement'=>$engagement->id])}}" method="post">
                 @method('DELETE')
                 @csrf
-                <button type="submit" class="btn btn-danger">Supprimer</button>
+                <button type="submit" style="background-color:#be8c3c;color:white;" class="btn btn-danger">Supprimer</button>
             </form> --}}
+            @endforeach
         </div>
-        @endforeach
     </div>
-</div>
-
-@endsection
+        @endsection

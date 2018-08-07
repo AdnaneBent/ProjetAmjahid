@@ -8,28 +8,29 @@
 {{-- <div class="container">
     <a class="btn btn-dark" href="{{route('biographies.create')}}">Ajouter la biographie</a>
 </div> --}}
-
-<div class="text-center">
-    <div class="row justify-content-around">
-    @foreach($biographies as $biographie)
-        <div class="card col-6" style="width: 18rem;">
-
-            <h3>Titre : {{$biographie->titre}}</h3>
-            <img class="card-img-top mt-2" src="{{Storage::disk('imgBiographie')->url($biographie->image)}}" alt="Card image cap">
-            <div class="card-body">
-                <h3>contenu de la biographie : <br>{!!$biographie->contenu!!}</h3>
+    <div class="box box-primary">
+        <div class="box-body box-profile">
+            @foreach($biographies as $biographie)
+            <div class="text-center">
+                <img class="profile-user-img img-responsive img-circle" style="width:20%;" src="{{Storage::disk('imgBiographie')->url($biographie->image)}}" alt="Card image cap">
             </div>
+                
+            <h3 class="profile-username text-center"> {{$biographie->titre}}</h3>
+            <br>
             <div class="card-body">
-                <a class="btn" style="background-color:#be8c3c;color:black;" href="{{route('biographies.edit',['id'=>$biographie->id])}}">Edité</a>
+                <h3>contenu de ma biographie :<br>
+                <br>    
+                {!!$biographie->contenu!!}</h3>
+            </div>
+             <div class="card-body">
+                <a class="btn" style="background-color:#be8c3c;color:white;" href="{{route('biographies.edit',['id'=>$biographie->id])}}">Edité</a>
             </div>
             {{-- <form action="{{route('biographies.destroy',['biographie'=>$biographie->id])}}" method="post">
                 @method('DELETE')
                 @csrf
                 <button type="submit" class="btn btn-danger">Supprimer</button>
             </form> --}}
+            @endforeach
         </div>
-        @endforeach
     </div>
-</div>
-
 @endsection

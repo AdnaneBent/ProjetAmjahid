@@ -26,11 +26,11 @@
                 <td>{{$palmaress->competition}}</td>
                 <td>{{$palmaress->resultat}}</td>
                 <td>{{$palmaress->categorie}}</td>
-            <td class="d-flex"><a  style="background-color:#be8c3c;color:black;" class="btn btn-primary" href="{{route("palmares.edit",['palmares'=>$palmaress->id])}}"> Modifié</a>
+            <td class="d-flex"><a  style="background-color:#be8c3c;color:white;" class="btn btn-primary" href="{{route("palmares.edit",['palmares'=>$palmaress->id])}}"> Modifié</a>
                 <form action="{{route('palmares.destroy',['palmares'=>$palmaress->id])}}" method="post">
                 @method('DELETE')
                 @csrf
-                <button type="submit"  style="background-color:#be8c3c;color:black;" class="btn btn-danger mx-2">Supprimé</button>
+                <button type="submit"  style="background-color:#be8c3c;color:white;" class="btn btn-danger mx-2">Supprimé</button>
             </form></td>
             </tr>
             @endforeach

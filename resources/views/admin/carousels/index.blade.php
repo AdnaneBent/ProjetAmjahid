@@ -16,12 +16,12 @@
             <h3>{{$carousel->name}}</h3>
             <img class="card-img-top mt-2" src="{{Storage::disk('imgCarousel')->url($carousel->image)}}" alt="Card image cap">
             <div class="card-body">
-                <a class="btn btn-primary" style="background-color:#be8c3c;color:black;" href="{{route('carousels.edit',['carousel'=>$carousel->id])}}">Edité</a>
+                <a class="btn btn-primary" style="background-color:#be8c3c;color:white;" href="{{route('carousels.edit',['carousel'=>$carousel->id])}}">Edité</a>
             </div>
             <form action="{{route('carousels.destroy',['carousel'=>$carousel->id])}}" method="post">
                 @method('DELETE')
                 @csrf
-                <button type="submit" style="background-color:#be8c3c;color:black;" class="btn btn-danger">Supprimer</button>
+                <button type="submit" style="background-color:#be8c3c;color:white;margin-bottom:20px;" class="btn btn-danger">Supprimer</button>
             </form>
         </div>
         @endforeach

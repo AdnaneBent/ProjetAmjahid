@@ -17,13 +17,13 @@
                 <table class="table table-hover">
                         @foreach($articles as $article)
                 <tbody><tr>
-                  <th>Titre</th>
+                  <th style="padding-left:20px;">Titre</th>
                   <th>Date</th>
                   <th>Contenu</th>
                   <th>Action</th>
                 </tr>
                 <tr>
-                <td> {{$article->titre}}</td>
+                <td style="padding-left:20px;"> {{$article->titre}}</td>
                   <td>{{$article->created_at->format('d m y')}}</td>
                   <td>{!!$description = substr($article->contenu, 0, 150)!!} ...</td>
                   <td><a class="btn btn-primary" style="background-color:#be8c3c;color:black;" href="{{route('articles.show',['article'=>$article->id])}}">Voir</a></td>
