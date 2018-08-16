@@ -11,6 +11,7 @@ use App\Carousel;
 use App\Article;
 use App\Header;
 use App\Academie;
+use App\Evenement;
 
 class FrontController extends Controller
 {
@@ -20,7 +21,8 @@ class FrontController extends Controller
         $engagement = Engagement::first();
         $header = Header::first();
         $academie = Academie::first();
-        return view("welcome",compact('biographie','engagement','galeries','header','academie'));
+        $evenements = Evenement::get()->sortByDesc("created_at")->take(3);
+        return view("welcome",compact('biographie','engagement','galeries','header','academie','evenements'));
     }
 
     public function partenaire(){

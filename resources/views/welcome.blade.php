@@ -242,6 +242,7 @@
   </section>
   <!--== Maintenance End ==-->
 
+  {{-- Evenements Start --}}
   <section>
     <div class="container">
       <div class="row">
@@ -250,31 +251,22 @@
 			<hr class="dark-bg center_line">
         </div>
       </div>
-      <div class="row mt-50">
-        <div class="col-md-4 col-sm-4 col-xs-12">
-         <div class="feature-box text-center mb-50 feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
-         	<span class="font-100px default-color">01</span>
-          	<h4 class="mt-0 font-600">Unique Element</h4>
-          	<p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-         <div class="feature-box text-center mb-50 feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-         	<span class="font-100px default-color">02</span>
-          	<h4 class="mt-0 font-600">Fully Responsive</h4>
-          	<p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
-         <div class="feature-box text-center mb-50 feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
-         	<span class="font-100px default-color">03</span>
-          	<h4 class="mt-0 font-600">Modern Design</h4>
-          	<p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          </div>
-        </div>
+    	<div class="row mt-50">
+			@foreach($evenements as $evenement)
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<div class="feature-box text-center feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.5s" style="visibility: visible; width:100%; animation-delay: 0.5s; animation-name: fadeInUp;">
+					<span class="font-50px textgold">{{$evenement->date}}</span>
+					<h4 class="mt-0 font-400">{{$evenement->name}}</h4>
+					<p class="font-400">{{$evenement->date}}</p>
+				</div>
+			</div>
+			@endforeach
+    	</div>
       </div>
     </div>
   </section>
+
+  {{-- Evenement End --}}
 
   <!--== Biographie Start ==-->
   <section class="pt-0 white-bg">
@@ -300,7 +292,7 @@
     <div class="container">
       <div class="row">
 		      <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.5s">
-        	<h2 class="mt-0 mb-0 font-80px textgold">{{$engagement->titre}}</h2
+        	<h2 class="mt-0 mb-0 font-60px textgold">{{$engagement->titre}}</h2
         	<p class="mt-30 font-300 font-16px">{!!$description = substr($engagement->contenu, 0, 300)!!} ...</p>
           <p class="mt-30"><a href="{{route('engagement')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
         </div>

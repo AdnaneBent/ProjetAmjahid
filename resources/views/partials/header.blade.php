@@ -86,6 +86,9 @@
           <li class="dropdown"> <a class="hovnav navtextcolor" href="{{route('welcome')}}">Accueil</a>
           
           </li>
+          <li class="dropdown"><a class="hovnav navtextcolor" href="{{route('athlete')}}">L'athlète</a>
+
+          </li>
           <li class="dropdown"> <a class="hovnav navtextcolor" href="{{route('academie')}}">Académie</a>
           
           </li>

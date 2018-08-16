@@ -149,7 +149,12 @@ return [
             'url'         => 'admin/engagements',
             'icon'        => 'file',
         ],
-         [
+        [
+            'text'        => 'Evenements',
+            'url'         => 'admin/evenements',
+            'icon'        => 'file',
+        ],
+        [
             'text'        => 'Academie',
             'url'         => 'admin/academies',
             'icon'        => 'file',

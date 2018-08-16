@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreEditGalerie extends FormRequest
+class StoreEvenement extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,20 +23,19 @@ class StoreEditGalerie extends FormRequest
      */
     public function rules()
     {
-         return [
+       return [
             'name'  =>  "required|max:45",
-            'image'  =>  'max:20000000|dimensions:min_width=1000,min_height=1000',
-            'image.max' => "L'image ne peut pas dépasser 20Mb",
+            'date' => 'required|',
         ];
     }
 
         public  function  messages()
         {
         return[
-        'name.required'  =>  "Le champ ne doit pas être vide",
+        'name.required'  =>  "Il faut un nom pour l'événement",
         'name.max' => "Maximum :max caractères",
-        'image.max' => "L'image ne peut pas dépasser 20Mb",
-        'image.dimensions' => 'Il faut respecter les dimensions',
+        'date.required' => "Il faut une date"
             ];
+        
     }
 }

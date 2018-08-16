@@ -26,8 +26,10 @@ Route::resource('/admin/engagements', 'EngagementController')->middleware('auth'
 Route::resource('/admin/galeries', 'GalerieController')->middleware('auth');;
 Route::resource('/admin/academies', 'AcademieController')->middleware('auth');;
 Route::resource('/admin/headers', 'HeaderController')->middleware('auth');;
+Route::resource('/admin/evenements', 'EvenementController')->middleware('auth');;
 
 Route::get('/', 'FrontController@welcome')->name('welcome');
+Route::get('/athlete', 'FrontController@athlete')->name('athlete');
 Route::get('/partenaire', 'FrontController@partenaire')->name('partenaire');
 Route::get('/academie', 'FrontController@academie')->name('academie');
 Route::get('/engagement', 'FrontController@engagement')->name('engagement');

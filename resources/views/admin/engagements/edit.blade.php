@@ -6,7 +6,7 @@
 <h1>Modification de mes engagements</h1>
 @stop
 
-   @section('content')
+  @section('content')
   <form action="{{route('engagements.update',['engagement'=>$engagement->id])}}" method="POST" enctype="multipart/form-data">
   @method('PATCH')
   @csrf

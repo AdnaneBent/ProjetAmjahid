@@ -34,7 +34,7 @@ class StoreHeader extends FormRequest
         public  function  messages()
         {
         return[
-        'titre.required'  =>  "Il faut un titre",
+        'titre.required'  =>  "Le champ ne doit pas être vide",
         'titre.max' => "Maximum :max caractères",
         'imageBG.max' => "L'image ne peut pas dépasser 20Mb",
         'imageAV.max' => "L'image ne peut pas dépasser 20Mb",

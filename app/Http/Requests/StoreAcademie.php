@@ -34,10 +34,10 @@ class StoreAcademie extends FormRequest
         public  function  messages()
         {
         return[
-        'titre.required'  =>  "Il faut un titre pour la biographie",
+        'titre.required'  =>  "Il faut un titre",
         'titre.max' => "Maximum :max caractères",
         'contenu.required' => "Il faut du contenu",
-        'image.required'  =>  "Il faut une image pour la biographie",
+        'image.required'  =>  "Il faut une image pour l'académie",
         'image.max' => "L'image ne peut pas dépasser 20Mb",
             ];
     }
