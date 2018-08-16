@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHeadersTable extends Migration
+class CreateAcademiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateHeadersTable extends Migration
      */
     public function up()
     {
-        Schema::create('headers', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('titre', 80);
-            $table->string('imageAV', 45);
-            $table->string('imageBG', 45);
+        Schema::create('academies', function (Blueprint $table) {
+             $table->increments('id');
+            $table->string('titre', 45);
+            $table->text('contenu');
+            $table->string('image', 45);
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreateHeadersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('headers');
+        Schema::dropIfExists('academies');
     }
 }

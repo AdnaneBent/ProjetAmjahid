@@ -320,17 +320,15 @@
     <div class="container">
       <div class="row">
 		   <div class="col-md-7 col-sm-7 wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
-        		<figure class=" mt-30">
-					<img 	src="http://localhost:8000/storage/imgEngagement/w0CZRI2YTsC7roBf80xnf79DoKjA5ARRGNiDhYox.jpeg" alt="Ses engagements">
-          		</figure>
+        		<figure class=" mt-30"><img src="{{Storage::disk('imgAcademie')->url($academie->image)}}" alt="{{$academie->titre}}" alt="">
+          	</figure>
 			</div>
 			
 			<div class="text-center wow fadeInUp col-md-5 col-sm-5" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
                 <div class="title-section" style="margin-top:60px;">
-            		<h2 class="mt-0 font-600 mt-0 mb-0 font-80px textgold">L’Académie</h2>
-                    <p class="font-400" style="width:75%;margin:auto;">Comme toute grande Championne, Amal transmet ses techniques et ses valeurs auprès des jeunes dans l’apprentissage du jiu-jitsu tout en s'amusant.
-					Les enfants de 3 à 17 ans peuvent s'inscrire pour perfectionner leur Jiu-Jitsu auprès d'elle. </p>
-					<p class="mt-30"><a href="http://127.0.0.1:8000/engagement" class="btn btn-md btn-warning btn-animate btn-square"><span>En savoir plus <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
+            		<h2 class="mt-0 font-600 mt-0 mb-0 font-80px textgold">{{$academie->titre}}</h2>
+                    <p class="font-400" style="width:75%;margin:auto;">{!!$academie->contenu!!} </p>
+					<p class="mt-30"><a href="http://127.0.0.1:8000/academie" class="btn btn-md btn-warning btn-animate btn-square"><span>En savoir plus <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
             	</div>
             </div>
       </div>

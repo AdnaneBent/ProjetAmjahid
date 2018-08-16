@@ -6,7 +6,7 @@
 
 <h2>La biographie</h2>
 <div class="container">
-    <a class="btn btn-dark" href="{{route('biographies.create')}}">Ajouter la biographie</a>
+    <a class="btn btn-dark mb-5" href="{{route('biographies.create')}}">Ajouter la biographie</a>
 </div>
     <div class="box box-primary">
         <div class="box-body box-profile">

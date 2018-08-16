@@ -24,10 +24,12 @@ Route::resource('/admin/socialNetworks', 'SocialNetworkController')->middleware(
 Route::resource('/admin/newsletters', 'NewsletterController')->middleware('auth');;
 Route::resource('/admin/engagements', 'EngagementController')->middleware('auth');;
 Route::resource('/admin/galeries', 'GalerieController')->middleware('auth');;
+Route::resource('/admin/academies', 'AcademieController')->middleware('auth');;
 Route::resource('/admin/headers', 'HeaderController')->middleware('auth');;
 
 Route::get('/', 'FrontController@welcome')->name('welcome');
 Route::get('/partenaire', 'FrontController@partenaire')->name('partenaire');
+Route::get('/academie', 'FrontController@academie')->name('academie');
 Route::get('/engagement', 'FrontController@engagement')->name('engagement');
 Route::get('/article', 'FrontController@article')->name('presse');
 Route::get('/articleshow/{article}', 'FrontController@articleShow')->name('presseshow');

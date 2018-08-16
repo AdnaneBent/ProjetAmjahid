@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'engagement')
+@section('title', 'academie')
 
 @section('content_header')
-<h1>Modification de mes engagements</h1>
+<h1>Modification de l'academie</h1>
 @stop
 
    @section('content')
-  <form action="{{route('engagements.update',['engagement'=>$engagement->id])}}" method="POST" enctype="multipart/form-data">
+  <form action="{{route('academies.update',['academie'=>$academie->id])}}" method="POST" enctype="multipart/form-data">
   @method('PATCH')
   @csrf
   <div class="box box-primary">
@@ -20,7 +20,7 @@
           @if($errors->has('titre'))
           <div class="text-danger">{{ $errors->first('titre')}}</div>
           @endif
-          <input type="text" name="titre" class="form-control" value="{{old('titre', $engagement->titre)}}" placeholder="Titre" >
+          <input type="text" name="titre" class="form-control" value="{{old('titre', $academie->titre)}}" placeholder="Titre" >
         </div>
         {{-- contenu --}}
         <div class="form-group">
@@ -28,7 +28,7 @@
           @if($errors->has('contenu'))
           <div class="text-danger">{{ $errors->first('contenu')}}</div>
           @endif
-          <textarea id="hello" name="contenu" for="contenu">{{old('contenu', $engagement->contenu)}}</textarea>
+          <textarea id="hello" name="contenu" for="contenu">{{old('contenu', $academie->contenu)}}</textarea>
           </textarea>
         </div>
         {{-- image --}}
@@ -42,7 +42,7 @@
         <button type="submit" style="background-color:#be8c3c;color:white;" class="btn btnAdmin">Enregistrer</button>
       </div>
       <div class="card-body">
-        <a href="{{route('engagements.index')}}" class="btn card-link" style="background-color:#be8c3c;color:white;">Retour</a>
+        <a href="{{route('academies.index')}}" class="btn card-link" style="background-color:#be8c3c;color:white;">Retour</a>
       </div>
       <!-- /.box-body -->
     </form>

@@ -108,6 +108,12 @@ return [
             'url' => env('APP_URL').'/storage/imgHeaderBG',
             'visibility' => 'public',
         ],
+        'imgAcademie' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/imgAcademie'),
+            'url' => env('APP_URL').'/storage/imgAcademie',
+            'visibility' => 'public',
+        ],
         
 
         's3' => [

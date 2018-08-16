@@ -4,9 +4,9 @@
 
 @section('content')
 
-<h2>La engagement</h2>
+<h2>Les engagements</h2>
 <div class="container">
-    <a class="btn btn-dark" href="{{route('engagements.create')}}">Ajouter la engagement</a>
+    <a class="btn btn-dark mb-5" href="{{route('engagements.create')}}">Ajouter la engagement</a>
 </div>
     <div class="box box-primary">
         <div class="box-body box-profile">

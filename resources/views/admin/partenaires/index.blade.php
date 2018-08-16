@@ -6,7 +6,7 @@
 
 <h2>Les partenaires</h2>
 <div class="container">
-    <a class="btn btn-dark" href="{{route('partenaires.create')}}">Ajouter un partenaire</a>
+    <a class="btn btn-dark mb-5" href="{{route('partenaires.create')}}">Ajouter un partenaire</a>
 </div>
 
 <div class="text-center">

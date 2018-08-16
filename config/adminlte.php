@@ -149,6 +149,11 @@ return [
             'url'         => 'admin/engagements',
             'icon'        => 'file',
         ],
+         [
+            'text'        => 'Academie',
+            'url'         => 'admin/academies',
+            'icon'        => 'file',
+        ],
         [
             'text'        => 'Galerie',
             'url'         => 'admin/galeries',
