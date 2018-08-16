@@ -14,7 +14,8 @@ class AthleteController extends Controller
      */
     public function index()
     {
-        //
+        $athletes = Athlete::all();
+        return view("admin.athletes.index",compact('athletes'));
     }
 
     /**
@@ -24,7 +25,7 @@ class AthleteController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.athletes.create",compact('athletes'));
     }
 
     /**

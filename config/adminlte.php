@@ -124,6 +124,11 @@ return [
             'url'         => 'admin/biographies',
             'icon'        => 'user',
         ],
+        [
+            'text'        => 'Athlete',
+            'url'         => 'admin/athlete',
+            'icon'        => 'file',
+        ],
          [
             'text'        => 'Partenaires',
             'url'         => 'admin/partenaires',

@@ -52,5 +52,10 @@ class FrontController extends Controller
         $academie = Academie::first();
         return view("academie",compact('academie'));
     }
+
+    public function athlete(athlete $athlete){
+        $athlete = Athlete::first();
+        return view("athlete",compact('athlete'));
+    }
     
 }

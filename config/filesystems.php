@@ -114,6 +114,12 @@ return [
             'url' => env('APP_URL').'/storage/imgAcademie',
             'visibility' => 'public',
         ],
+        'imgAthlete' => [
+            'driver' => 'local',
+            'root' => storage_path('app/public/imgAthlete'),
+            'url' => env('APP_URL').'/storage/imgAthlete',
+            'visibility' => 'public',
+        ],
         
 
         's3' => [

@@ -25,6 +25,7 @@ Route::resource('/admin/newsletters', 'NewsletterController')->middleware('auth'
 Route::resource('/admin/engagements', 'EngagementController')->middleware('auth');;
 Route::resource('/admin/galeries', 'GalerieController')->middleware('auth');;
 Route::resource('/admin/academies', 'AcademieController')->middleware('auth');;
+Route::resource('/admin/athlete', 'AthleteController')->middleware('auth');;
 Route::resource('/admin/headers', 'HeaderController')->middleware('auth');;
 Route::resource('/admin/evenements', 'EvenementController')->middleware('auth');;
 
