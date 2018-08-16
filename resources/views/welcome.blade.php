@@ -33,7 +33,7 @@
     			data-paddingbottom="[0,0,0,0]"
     			data-paddingleft="[10,10,10,10]"
 
-    			style="z-index: 5; white-space: nowrap; font-size: 150px; line-height: 120px; font-weight: 700; color: #ffffff; letter-spacing: -10px;font-family: 'Montserrat', sans-serif;">{{$header->titre}}</div>
+    			style="z-index: 5; white-space: nowrap; font-size: 150px; line-height: 120px; font-weight: 700; color: #ffffff; letter-spacing: -10px;font-family: 'Montserrat', sans-serif;">Amal Amjahid</div>
 
     		<!-- LAYER NR. 2 -->
     		<div class="tp-caption   tp-resizeme"
@@ -234,7 +234,7 @@
     			data-paddingbottom="[0,0,0,0]"
     			data-paddingleft="[20,20,20,20]"
 
-    			style="z-index: 14; white-space: nowrap; font-size: 15px; line-height: 20px; font-weight: 600; color: #888888; letter-spacing: 10px;font-family: 'Montserrat', sans-serif;text-transform:uppercase;">Championne de jujitsu </div>
+    			style="z-index: 14; white-space: nowrap; font-size: 15px; line-height: 20px; font-weight: 600; color: #888888; letter-spacing: 10px;font-family: 'Montserrat', sans-serif;text-transform:uppercase;">{{$header->titre}}</div>
     	</li>
     </ul>
     <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
@@ -242,14 +242,48 @@
   </section>
   <!--== Maintenance End ==-->
 
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 section-heading">
+       		<h3 class="font-600 mt-10 textgold">Prochains EVENEMENTS</h3>
+			<hr class="dark-bg center_line">
+        </div>
+      </div>
+      <div class="row mt-50">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+         <div class="feature-box text-center mb-50 feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+         	<span class="font-100px default-color">01</span>
+          	<h4 class="mt-0 font-600">Unique Element</h4>
+          	<p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+         <div class="feature-box text-center mb-50 feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+         	<span class="font-100px default-color">02</span>
+          	<h4 class="mt-0 font-600">Fully Responsive</h4>
+          	<p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+         <div class="feature-box text-center mb-50 feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+         	<span class="font-100px default-color">03</span>
+          	<h4 class="mt-0 font-600">Modern Design</h4>
+          	<p class="font-400">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!--== Biographie Start ==-->
-  <section class="pt-0">
+  <section class="pt-0 white-bg">
     <div class="container">
     	<div class="row">
-        	<div class="col-md-6 wow fadeInLeft mt-80 mb-80" data-wow-delay="0.1s">
+        	<div class="col-md-6 wow fadeInLeft mt-80 mb-80" data-wow-delay="0.5s">
        	    	<img class="img-responsive" src="{{Storage::disk('imgBiographie')->url($biographie->image)}}" alt="{{$biographie->titre}}" alt="">
             </div>
-            <div class="col-md-6 wow fadeInRight mt-100" data-wow-delay="0.2s">
+            <div class="col-md-6 wow fadeInRight mt-100" data-wow-delay="0.5s">
                 <div>
                 <h2 class="textgold">{{$biographie->titre}}</h2>
                     <p>{!!$biographie->contenu!!}</p>
@@ -262,15 +296,15 @@
 
   {{-- Engagements Start --}}
 
-<section class="white-bg" id="restaurant">
+<section>
     <div class="container">
       <div class="row">
-		      <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.1s">
+		      <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.5s">
         	<h2 class="mt-0 mb-0 font-80px textgold">{{$engagement->titre}}</h2
         	<p class="mt-30 font-300 font-16px">{!!$description = substr($engagement->contenu, 0, 300)!!} ...</p>
           <p class="mt-30"><a href="{{route('engagement')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
         </div>
-        <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.2s">
+        <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.5s">
         	<figure class=" mt-30"><img src="{{Storage::disk('imgEngagement')->url($engagement->image)}}" alt="{{$engagement->titre}}" alt="">
           	</figure>
         </div>
@@ -279,6 +313,31 @@
   </section>
 
 	{{-- Engagement End --}}
+
+	{{-- Academy Start --}}
+
+	<section class="white-bg">
+    <div class="container">
+      <div class="row">
+		   <div class="col-md-7 col-sm-7 wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+        		<figure class=" mt-30">
+					<img 	src="http://localhost:8000/storage/imgEngagement/w0CZRI2YTsC7roBf80xnf79DoKjA5ARRGNiDhYox.jpeg" alt="Ses engagements">
+          		</figure>
+			</div>
+			
+			<div class="text-center wow fadeInUp col-md-5 col-sm-5" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+                <div class="title-section" style="margin-top:60px;">
+            		<h2 class="mt-0 font-600 mt-0 mb-0 font-80px textgold">L’Académie</h2>
+                    <p class="font-400" style="width:75%;margin:auto;">Comme toute grande Championne, Amal transmet ses techniques et ses valeurs auprès des jeunes dans l’apprentissage du jiu-jitsu tout en s'amusant.
+					Les enfants de 3 à 17 ans peuvent s'inscrire pour perfectionner leur Jiu-Jitsu auprès d'elle. </p>
+					<p class="mt-30"><a href="http://127.0.0.1:8000/engagement" class="btn btn-md btn-warning btn-animate btn-square"><span>En savoir plus <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
+            	</div>
+            </div>
+      </div>
+    </div>
+  </section>
+
+  {{-- Academy End --}}
 
    <!--== Portfolio Start ==-->
   <section class="pb-0">

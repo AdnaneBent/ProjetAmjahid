@@ -5,9 +5,9 @@
 @section('content')
 
 <h2>La biographie</h2>
-{{-- <div class="container">
+<div class="container">
     <a class="btn btn-dark" href="{{route('biographies.create')}}">Ajouter la biographie</a>
-</div> --}}
+</div>
     <div class="box box-primary">
         <div class="box-body box-profile">
             @foreach($biographies as $biographie)
@@ -23,7 +23,7 @@
                 {!!$biographie->contenu!!}</h3>
             </div>
              <div class="card-body">
-                <a class="btn" style="background-color:#be8c3c;color:white;" href="{{route('biographies.edit',['id'=>$biographie->id])}}">Edité</a>
+                <a class="btn" style="background-color:#be8c3c;color:white;" href="{{route('biographies.edit',['id'=>$biographie->id])}}">Editer</a>
             </div>
             {{-- <form action="{{route('biographies.destroy',['biographie'=>$biographie->id])}}" method="post">
                 @method('DELETE')

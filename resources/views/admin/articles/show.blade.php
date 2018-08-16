@@ -24,7 +24,7 @@
             {{-- Fin du contenu de l'article --}}
             <div class="row">
                 <div class="col-6"><div class="box-body">
-                <a class="btn btn-primary" style="background-color:#be8c3c;color:black;" href="{{route('articles.edit',['article'=>$article->id])}}">Edité</a>
+                <a class="btn btn-primary" style="background-color:#be8c3c;color:black;" href="{{route('articles.edit',['article'=>$article->id])}}">Editer</a>
                 </div>
                 <form action="{{route('articles.destroy',['article'=>$article->id])}}"method="post">
                 @method('DELETE')

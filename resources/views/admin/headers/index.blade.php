@@ -5,9 +5,9 @@
 @section('content')
 
 <h2>Le header</h2>
-{{-- <div class="container">
-    <a class="btn btn-dark" href="{{route('headers.create')}}">Ajouter un header</a>
-</div> --}}
+<div class="container">
+    <a class="btn btn-dark" href="{{route('headers.create')}}">Ajouter le header</a>
+</div>
 
     <div class="text-center">
         <div class="row justify-content-around">
@@ -30,7 +30,7 @@
             </form> --}}
         </div>
          <div class="card-body">
-                <a class="btn btn-primary" style="background-color:#be8c3c;color:white;" href="{{route ('headers.edit',['id'=>$header->id])}}">Edité</a>
+                <a class="btn btn-primary" style="background-color:#be8c3c;color:white;" href="{{route ('headers.edit',['id'=>$header->id])}}">Editer</a>
             </div>
         @endforeach
         </div>

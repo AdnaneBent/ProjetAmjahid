@@ -5,9 +5,9 @@
 @section('content')
 
 <h2>La engagement</h2>
-{{-- <div class="container">
+<div class="container">
     <a class="btn btn-dark" href="{{route('engagements.create')}}">Ajouter la engagement</a>
-</div> --}}
+</div>
     <div class="box box-primary">
         <div class="box-body box-profile">
             @foreach($engagements as $engagement)
@@ -23,7 +23,7 @@
                 {!!$engagement->contenu!!}</h3>
             </div>
              <div class="card-body">
-                <a class="btn" style="background-color:#be8c3c;color:white;" href="{{route('engagements.edit',['id'=>$engagement->id])}}">Edité</a>
+                <a class="btn" style="background-color:#be8c3c;color:white;" href="{{route('engagements.edit',['id'=>$engagement->id])}}">Editer</a>
             </div>
             {{-- <form action="{{route('engagements.destroy',['engagement'=>$engagement->id])}}" method="post">
                 @method('DELETE')
