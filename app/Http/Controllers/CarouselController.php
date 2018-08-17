@@ -52,7 +52,8 @@ class CarouselController extends Controller
             "w" => 1100,
             "h" => 700
         ];
-         $carousel->image = $this->imageResize->imageStore($image);
+        $carousel->image = $this->imageResize->imageStore($image);
+
 
         $carousel->save();
         return redirect()->route("carousels.index");

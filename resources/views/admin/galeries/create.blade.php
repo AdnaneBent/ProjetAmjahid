@@ -23,7 +23,7 @@
           <input type="text" name="name" class="form-control" value="{{old('name')}}" placeholder="Nom" >
         </div>
         {{-- image --}}
-        <h5>Image</h5>
+        <h5>Image 1000x1000</h5>
         <img src="" alt="">
         @if($errors->has('image'))
             <div class="text-danger">{{ $errors->first('image')}}</div>

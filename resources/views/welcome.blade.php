@@ -316,7 +316,7 @@
           	</figure>
 			</div>
 
-			<div class="text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+			<div class="text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.5s" style="right:130px; visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
                 <div class="title-section" style="margin-top:60px;">
             		<h2 class="mt-0 font-600 mt-0 mb-0 font-80px textgold">{{$academie->titre}}</h2>
                     <p class="font-400" style="width:75%;margin:auto;">{!!$academie->contenu!!} </p>

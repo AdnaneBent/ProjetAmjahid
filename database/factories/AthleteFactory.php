@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\athlete::class, function (Faker $faker) {
+$factory->define(App\Athlete::class, function (Faker $faker) {
     return [
         //
     ];

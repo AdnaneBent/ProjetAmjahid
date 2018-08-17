@@ -21,6 +21,14 @@
           @endif
           <input type="text" name="name" class="form-control" value="{{old('name')}}" placeholder="Nom" >
         </div>
+        <div class="form-group">
+          {{-- name --}}
+          <label for="url">Site du partenaire</label>
+          @if($errors->has('url'))
+          <div class="text-danger">{{ $errors->first('url')}}</div>
+          @endif
+          <input type="text" name="url" class="form-control" value="{{old('url')}}" placeholder="l'url du site" >
+        </div>
         {{-- image --}}
         <h5>Image</h5>
         <img src="" alt="">

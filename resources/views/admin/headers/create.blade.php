@@ -31,7 +31,7 @@
         @endif
         <input class="pb-2" name="imageAV" type="file"><br>
         <br>
-         <h5>Image background</h5>
+         <h5>Image background 1920x1080</h5>
         <img src="" alt="">
         @if($errors->has('imageBG'))
             <div class="text-danger">{{ $errors->first('imageBG')}}</div>

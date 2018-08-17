@@ -6,7 +6,7 @@
 <h1>Modification de la biographie</h1>
 @stop
 
-   @section('content')
+  @section('content')
   <form action="{{route('biographies.update',['biographie'=>$biographie->id])}}" method="POST" enctype="multipart/form-data">
   @method('PATCH')
   @csrf

@@ -12,6 +12,7 @@ use App\Article;
 use App\Header;
 use App\Academie;
 use App\Evenement;
+use App\Athlete;
 
 class FrontController extends Controller
 {

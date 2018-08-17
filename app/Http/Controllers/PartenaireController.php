@@ -40,6 +40,7 @@ class PartenaireController extends Controller
     {
         $partenaire = new Partenaire;
         $partenaire->name = $request->name;
+        $partenaire->url = $request->url;
         $partenaire->image = $request->image->store('','imgPartenaire');
 
         $partenaire->save();
@@ -80,6 +81,7 @@ class PartenaireController extends Controller
     {
         $partenaire = Partenaire::find($id);
         $partenaire->name = $request->name;
+        $partenaire->url = $request->url;
         if($request->image != null){
         $partenaire->image = $request->image->store('','imgPartenaire');
         }
