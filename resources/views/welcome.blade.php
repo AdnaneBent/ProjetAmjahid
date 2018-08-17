@@ -242,32 +242,6 @@
   </section>
   <!--== Maintenance End ==-->
 
-  {{-- Evenements Start --}}
-  <section>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-8 section-heading">
-       		<h3 class="font-600 mt-10 textgold">Prochains EVENEMENTS</h3>
-			<hr class="dark-bg center_line">
-        </div>
-      </div>
-    	<div class="row mt-50">
-			@foreach($evenements as $evenement)
-			<div class="col-md-4 col-sm-4 col-xs-12">
-				<div class="feature-box text-center feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.5s" style="visibility: visible; width:100%; animation-delay: 0.5s; animation-name: fadeInUp;">
-					<span class="font-50px textgold">{{$evenement->date}}</span>
-					<h4 class="mt-0 font-400">{{$evenement->name}}</h4>
-					<p class="font-400">{{$evenement->date}}</p>
-				</div>
-			</div>
-			@endforeach
-    	</div>
-      </div>
-    </div>
-  </section>
-
-  {{-- Evenement End --}}
-
   <!--== Biographie Start ==-->
   <section class="pt-0 white-bg">
     <div class="container">
@@ -286,11 +260,37 @@
   </section>
   <!--== Biographies End ==-->
 
+  {{-- Evenements Start --}}
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 section-heading">
+       		<h3 class="font-600 mt-10 textgold">Prochains EVENEMENTS</h3>
+			<hr class="dark-bg center_line">
+        </div>
+      </div>
+    	<div class="row mt-50">
+			@foreach($evenements as $evenement)
+			<div class="col-md-4 col-sm-4 col-xs-12">
+				<div class="feature-box text-center feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.5s" style="visibility: visible; height:200px; width:100%; animation-delay: 0.5s; animation-name: fadeInUp;">
+					<span class="font-50px textgold">{{$evenement->date}}</span>
+					<h4 class="mt-0 font-400">{{$evenement->name}}</h4>
+					<p class="font-400">More info</p>
+				</div>
+			</div>
+			@endforeach
+    	</div>
+      </div>
+    </div>
+  </section>
+
+  {{-- Evenement End --}}
+
   {{-- Engagements Start --}}
 
 <section>
     <div class="container">
-      <div class="row">
+      <div class="row text-center">
 		      <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.5s">
         	<h2 class="mt-0 mb-0 font-60px textgold">{{$engagement->titre}}</h2
         	<p class="mt-30 font-300 font-16px">{!!$description = substr($engagement->contenu, 0, 300)!!} ...</p>
@@ -315,14 +315,14 @@
         		<figure class=" mt-30"><img src="{{Storage::disk('imgAcademie')->url($academie->image)}}" alt="{{$academie->titre}}" alt="">
           	</figure>
 			</div>
-			
-			<div class="text-center wow fadeInUp col-md-5 col-sm-5" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+
+			<div class="text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
                 <div class="title-section" style="margin-top:60px;">
             		<h2 class="mt-0 font-600 mt-0 mb-0 font-80px textgold">{{$academie->titre}}</h2>
                     <p class="font-400" style="width:75%;margin:auto;">{!!$academie->contenu!!} </p>
 					<p class="mt-30"><a href="http://127.0.0.1:8000/academie" class="btn btn-md btn-warning btn-animate btn-square"><span>En savoir plus <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
             	</div>
-            </div>
+            </div>	
       </div>
     </div>
   </section>

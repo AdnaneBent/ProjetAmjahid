@@ -26,7 +26,7 @@ class StoreEditPartenaire extends FormRequest
         return [
             'name'  =>  "required|max:45",
             'image'  =>  'max:20000000|',
-            'image.max' => "L'image ne peut pas dépasser 20Mb",
+
         ];
     }
 

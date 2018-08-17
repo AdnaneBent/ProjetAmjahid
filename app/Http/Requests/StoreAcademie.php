@@ -27,7 +27,6 @@ class StoreAcademie extends FormRequest
             'titre'  =>  "required|max:45",
             'contenu' => 'required|',
             'image'  =>  'required|max:20000000|',
-            'image.max' => "L'image ne peut pas dépasser 20Mb",
         ];
     }
 

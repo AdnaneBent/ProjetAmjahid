@@ -7,6 +7,7 @@ use Storage;
 use Illuminate\Http\Request;
 use Image;
 use App\Services\imageResize;
+use App\Http\Requests\StoreCarousel;
 
 class CarouselController extends Controller
 {
@@ -41,7 +42,7 @@ class CarouselController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreCarousel $request)
     {
         $carousel = new Carousel;
         $carousel->name = $request->name;
@@ -87,7 +88,7 @@ class CarouselController extends Controller
      * @param  \App\Carousel  $carousel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreEditCarousel $request, $id)
     {
         $carousel = Carousel::find($id);
         $carousel->name = $request->name;

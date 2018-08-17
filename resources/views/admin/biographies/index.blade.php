@@ -18,8 +18,7 @@
             <h3 class="profile-username text-center"> {{$biographie->titre}}</h3>
             <br>
             <div class="card-body">
-                <h3>contenu de ma biographie :<br>
-                <br>    
+                <h3>    
                 {!!$biographie->contenu!!}</h3>
             </div>
              <div class="card-body">

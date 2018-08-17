@@ -26,8 +26,7 @@ class StoreHeader extends FormRequest
          return [
             'titre'  =>  "required|max:80",
             'imageBG'  =>  'required|max:20000000|dimensions:min_width=1920,min_height=1080',
-            'imageBG.max' => "L'image ne peut pas dépasser 20Mb",
-            'imageAV.max' => "L'image ne peut pas dépasser 20Mb",
+
         ];
     }
 
@@ -39,7 +38,7 @@ class StoreHeader extends FormRequest
         'imageBG.max' => "L'image ne peut pas dépasser 20Mb",
         'imageAV.max' => "L'image ne peut pas dépasser 20Mb",
         'imageBG.required' => "Il faut une image",
-        'imageBG.dimensions' => 'Il faut respecter les dimensions',
+        'imageBG.dimensions' => 'Il faut respecter les dimensions 1920x1080',
             ];
     
     }

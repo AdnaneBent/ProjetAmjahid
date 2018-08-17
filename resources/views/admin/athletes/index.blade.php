@@ -6,7 +6,7 @@
 
 <h2>L'athlete</h2>
 <div class="container">
-    <a class="btn btn-dark" href="{{route('athlete.create')}}">Ajouter de la section athlete</a>
+    <a class="btn btn-dark" href="{{route('athlete.create')}}">Ajouter la partie athlete</a>
 </div>
 
     <div class="text-center">

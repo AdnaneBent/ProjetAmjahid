@@ -27,7 +27,6 @@ class StoreGalerie extends FormRequest
          return [
             'name'  =>  "required|max:45",
             'image'  =>  'required|max:20000000|dimensions:min_width=1000,min_height=1000',
-            'image.max' => "L'image ne peut pas dépasser 20Mb",
         ];
     }
 
@@ -38,7 +37,7 @@ class StoreGalerie extends FormRequest
         'name.max' => "Maximum :max caractères",
         'image.max' => "L'image ne peut pas dépasser 20Mb",
         'image.required' => "Il faut une image",
-        'image.dimensions' => 'Il faut respecter les dimensions',
+        'image.dimensions' => 'Il faut respecter les dimensions 1000x1000',
             ];
     }
 }

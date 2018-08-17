@@ -26,7 +26,6 @@ class StoreEditGalerie extends FormRequest
          return [
             'name'  =>  "required|max:45",
             'image'  =>  'max:20000000|dimensions:min_width=1000,min_height=1000',
-            'image.max' => "L'image ne peut pas dépasser 20Mb",
         ];
     }
 
@@ -36,7 +35,7 @@ class StoreEditGalerie extends FormRequest
         'name.required'  =>  "Le champ ne doit pas être vide",
         'name.max' => "Maximum :max caractères",
         'image.max' => "L'image ne peut pas dépasser 20Mb",
-        'image.dimensions' => 'Il faut respecter les dimensions',
+        'image.dimensions' => 'Il faut respecter les dimensions 1000x1000',
             ];
     }
 }

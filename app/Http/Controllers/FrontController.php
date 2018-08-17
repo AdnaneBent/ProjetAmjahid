@@ -21,7 +21,7 @@ class FrontController extends Controller
         $engagement = Engagement::first();
         $header = Header::first();
         $academie = Academie::first();
-        $evenements = Evenement::get()->sortByDesc("created_at")->take(3);
+        $evenements = Evenement::get()->take(3);
         return view("welcome",compact('biographie','engagement','galeries','header','academie','evenements'));
     }
 
