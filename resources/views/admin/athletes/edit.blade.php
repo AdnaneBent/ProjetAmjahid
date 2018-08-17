@@ -87,7 +87,12 @@
               @if($errors->has('champJ'))
               <div class="text-danger">{{ $errors->first('champJ')}}</div>
               @endif
-              <input type="text" name="champJ" class="form-control" value="{{old('champJ', $athlete->champJ)}}" placeholder="Championne des Jeux mondiaux">
+              <input type="text" name="champJ" class="form-control" value="{{old('champJ', $athlete->champJ)}}" placeholder="Championne des Jeux mondiaux"><br>
+              <img src="" alt="">
+              @if($errors->has('image'))
+                <div class="text-danger">{{ $errors->first('image')}}</div>
+              @endif
+            <input class="pb-2" name="image" type="file"><br>
             </div>
           </div>
         </div>

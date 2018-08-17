@@ -55,8 +55,9 @@ class FrontController extends Controller
     }
 
     public function athlete(athlete $athlete){
-        $athlete = Athlete::first();
-        return view("athlete",compact('athlete'));
+        $athletes = Athlete::all();
+        $biographie= Biographie::first();
+        return view("athlete",compact('athletes','biographie'));
     }
     
 }
