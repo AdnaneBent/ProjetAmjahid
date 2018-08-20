@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Athlete;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreAthlete;
+use App\Http\Requests\StoreEditAthlete;
 
 class AthleteController extends Controller
 {
@@ -35,7 +37,7 @@ class AthleteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreAthlete $request)
     {
         $athlete = new Athlete;
         $athlete->titre = $request->titre;
@@ -83,7 +85,7 @@ class AthleteController extends Controller
      * @param  \App\Athlete  $athlete
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreEditAthlete $request, $id)
     {
 
         $athlete = Athlete::find($id);

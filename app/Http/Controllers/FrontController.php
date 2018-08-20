@@ -13,6 +13,7 @@ use App\Header;
 use App\Academie;
 use App\Evenement;
 use App\Athlete;
+use App\Palmares;
 
 class FrontController extends Controller
 {
@@ -57,7 +58,8 @@ class FrontController extends Controller
     public function athlete(athlete $athlete){
         $athletes = Athlete::all();
         $biographie= Biographie::first();
-        return view("athlete",compact('athletes','biographie'));
+        $palmares= Palmares::all();
+        return view("athlete",compact('athletes','biographie','palmares'));
     }
     
 }

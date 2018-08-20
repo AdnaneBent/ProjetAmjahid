@@ -70,6 +70,37 @@
   </section>
   <!--== Biographies End ==-->
 
+  {{-- Palmares Start --}}
+
+<section class="pt-0">
+    <div class="container">
+        <h1 class="textgold wow fadeInRight">Le palmares</h1>
+            <br>
+        <table class="table table-light white-bg">
+            <thead>
+                <tr>
+                    <th class="wow fadeInDown">Année</th>
+                    <th class="wow fadeInDown">Compétition</th>
+                    <th class="wow fadeInDown">Résultat</th>
+                    <th class="wow fadeInDown">Catégorie</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($palmares as $palmaress)
+                <tr>
+                    <td class="wow fadeInUp">{{$palmaress->annee}}</td>
+                    <td class="wow fadeInUp">{{$palmaress->competition}}</td>
+                    <td class="wow fadeInUp">{{$palmaress->resultat}}</td>
+                    <td class="wow fadeInUp">{{$palmaress->categorie}}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</section>
+
+    {{-- Palmares End --}}
+
 
 
 
