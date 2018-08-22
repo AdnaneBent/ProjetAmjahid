@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Image;
 use App\Services\imageResize;
 use App\Http\Requests\StoreCarousel;
+use App\Http\Requests\StoreEditCarousel;
 
 class CarouselController extends Controller
 {
@@ -50,7 +51,7 @@ class CarouselController extends Controller
             "name" => $request->image,
             "disk" => "imgCarousel",
             "w" => 1100,
-            "h" => 700
+            "h" => 400
         ];
         $carousel->image = $this->imageResize->imageStore($image);
 
@@ -100,7 +101,7 @@ class CarouselController extends Controller
     
             $image = [
                 "name" => $request->image,
-                "disk" => "imgcarousel",
+                "disk" => "imgCarousel",
                 "w" => 1100,
                 "h" => 700
             ];

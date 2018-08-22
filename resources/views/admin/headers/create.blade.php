@@ -21,7 +21,8 @@
         @if($errors->has('titre'))
             <div class="text-danger">{{ $errors->first('titre')}}</div>
         @endif
-        <input type="text" name="titre" value="{{old('titre')}}">
+        <textarea id="hello" type="text" name="titre" value="{{old('titre')}}">
+        </textarea>
         </label>
         {{-- image --}}
         <h5>Image Avant plan</h5>
@@ -47,5 +48,12 @@
     </form>
   </div>
 
+
+
+   @section('js')
+  <script>
+    CKEDITOR.replace('hello');
+  </script>
+  @endsection
 
 @endsection

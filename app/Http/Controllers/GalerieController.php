@@ -53,8 +53,8 @@ class GalerieController extends Controller
             $image = [
                 "name" => $request->image,
                 "disk" => "imgGalerie",
-                "w" => 1000,
-                "h" => 1000
+                "w" => 330,
+                "h" => 330
             ];
             $galerie->image = $this->imageResize->imageStore($image);
         }
@@ -105,8 +105,8 @@ class GalerieController extends Controller
             $image = [
                 "name" => $request->image,
                 "disk" => "imgGalerie",
-                "w" => 1000,
-                "h" => 1000
+                "w" => 330,
+                "h" => 330
             ];
             $galerie->image = $this->imageResize->imageStore($image);
         }

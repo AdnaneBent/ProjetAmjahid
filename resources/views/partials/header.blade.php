@@ -9,11 +9,13 @@
 <!-- keywords -->
 <meta name="keywords" content="creative, animation, business, photography, portfolio, one page, bootstrap responsive, start-up, ui/ux, html5, css3, studio, branding, creative design, multipurpose, parallax, personal, masonry, grid, coming soon, carousel, career">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Amal Amjahid</title>
+<title></title>
 <link rel="shortcut icon" href="assets/images/favicon.ico">
 
 <!-- Core Style Sheets -->
 <link rel="stylesheet" href="{{asset('theme/assets/css/master.css')}}">
+{{-- Mon CSS --}}
+<link rel="stylesheet" href="{{asset('theme/assets/css/monCss.css')}}">
 <!-- Responsive Style Sheets -->
 <link rel="stylesheet" href="{{asset('theme/assets/css/responsive.css')}}">
 <!-- Revolution Style Sheets -->

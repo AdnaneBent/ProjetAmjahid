@@ -21,7 +21,7 @@ Route::resource('/admin/articles', 'ArticleController')->middleware('auth');;
 Route::resource('/admin/athlete', 'AthleteController')->middleware('auth');;
 Route::resource('/admin/carousels', 'CarouselController')->middleware('auth');;
 Route::resource('/admin/palmares', 'PalmaresController')->middleware('auth');;
-Route::resource('/admin/socialNetworks', 'SocialNetworkController')->middleware('auth');;
+Route::resource('/admin/networks', 'SocialNetworkController')->middleware('auth');;
 Route::resource('/admin/newsletters', 'NewsletterController')->middleware('auth');;
 Route::resource('/admin/engagements', 'EngagementController')->middleware('auth');;
 Route::resource('/admin/galeries', 'GalerieController')->middleware('auth');;

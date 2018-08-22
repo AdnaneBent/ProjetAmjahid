@@ -14,7 +14,8 @@ class SocialNetworkController extends Controller
      */
     public function index()
     {
-        //
+        $socialnetworks = SocialNetwork::all();
+        return view("admin.networks.index",compact('socialnetworks'));
     }
 
     /**
@@ -24,7 +25,7 @@ class SocialNetworkController extends Controller
      */
     public function create()
     {
-        //
+        return view("admin.networks.create",compact('socialnetworks'));
     }
 
     /**
@@ -35,7 +36,12 @@ class SocialNetworkController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $socialnetwork = new SocialNetwork;
+        $socialnetwork->name = $request->name;
+        $socialnetwork->link = $request->link;
+
+        $socialnetwork->save();
+        return redirect()->route("networks.index");
     }
 
     /**
@@ -78,8 +84,10 @@ class SocialNetworkController extends Controller
      * @param  \App\SocialNetwork  $socialNetwork
      * @return \Illuminate\Http\Response
      */
-    public function destroy(SocialNetwork $socialNetwork)
+    public function destroy($id)
     {
-        //
+        $socialnetwork = SocialNetwork::find($id);
+        $socialnetwork->delete();
+        return redirect()->route('networks.index');
     }
 }

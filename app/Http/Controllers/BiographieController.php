@@ -6,9 +6,15 @@ use App\Biographie;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreBiographie;
 use App\Http\Requests\StoreEditBiographie;
+use Storage;
+use App\Services\imageResize;
 
 class BiographieController extends Controller
 {
+
+     public function __construct(ImageResize $imageResize){
+        $this->imageResize = $imageResize;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -41,7 +47,12 @@ class BiographieController extends Controller
         $biographie = new Biographie;
         $biographie->titre = $request->titre;
         $biographie->contenu = $request->contenu;
-        $biographie->image = $request->image->store('','imgBiographie');
+        $image = [
+            "name" => $request->image,
+            "disk" => "imgBiographie",
+            "h" => 1000
+        ];
+        $biographie->image = $this->imageResize->imageStore($image);
 
         $biographie->save();
         return redirect()->route("biographies.index");
@@ -85,8 +96,18 @@ class BiographieController extends Controller
 
         $biographie->titre = $request->titre;
         $biographie->contenu = $request->contenu;
-        if($request->image != null){
-        $biographie->image = $request->image->store('','imgBiographie');
+         if ($request->image != null)
+        {
+            Storage::disk('imgBiographie')->delete($biographie->image);
+           
+    
+            $image = [
+                "name" => $request->image,
+                "disk" => "imgBiographie",
+                "w" => 1000,
+                "h" => 1000
+            ];
+            $biographie->image = $this->imageResize->imageStore($image);
         }
 
         $biographie->save();

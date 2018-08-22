@@ -33,7 +33,7 @@
     			data-paddingbottom="[0,0,0,0]"
     			data-paddingleft="[10,10,10,10]"
 
-    			style="z-index: 5; white-space: nowrap; font-size: 150px; line-height: 120px; font-weight: 700; color: #ffffff; letter-spacing: -10px;font-family: 'Montserrat', sans-serif;">Amal Amjahid</div>
+    			style="z-index: 5; white-space: nowrap; font-size: 150px; line-height: 120px; font-weight: 700; color: #be8c3c; letter-spacing: -10px;font-family: 'Montserrat', sans-serif;">Amal Amjahid</div>
 
     		<!-- LAYER NR. 2 -->
     		<div class="tp-caption   tp-resizeme"
@@ -234,7 +234,7 @@
     			data-paddingbottom="[0,0,0,0]"
     			data-paddingleft="[20,20,20,20]"
 
-    			style="z-index: 14; white-space: nowrap; font-size: 15px; line-height: 20px; font-weight: 600; color: #888888; letter-spacing: 10px;font-family: 'Montserrat', sans-serif;text-transform:uppercase;">{{$header->titre}}</div>
+    			style="z-index: 14; white-space: nowrap; font-size: 15px; line-height: 20px; font-weight: 600; color: #888888; letter-spacing: 10px;font-family: 'Montserrat', sans-serif;text-transform:uppercase;">{!!$header->titre!!}</div>
     	</li>
     </ul>
     <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
@@ -243,25 +243,25 @@
   <!--== Maintenance End ==-->
 
   <!--== Biographie Start ==-->
-  <section class="pt-0 white-bg">
-    <div class="container">
+   <section class="pt-0">
+    <div class="container para">
     	<div class="row">
-        	<div class="col-md-6 wow fadeInLeft mt-80 mb-80" data-wow-delay="0.5s">
-       	    	<img class="img-responsive" src="{{Storage::disk('imgBiographie')->url($biographie->image)}}" alt="{{$biographie->titre}}" alt="">
-            </div>
-            <div class="col-md-6 wow fadeInRight mt-100" data-wow-delay="0.5s">
+        	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.5s">
                 <div>
                 <h2 class="textgold">{{$biographie->titre}}</h2>
                     <p>{!!$biographie->contenu!!}</p>
                 </div>
+			</div>
+			<div style="background-image:url('{{Storage::disk('imgBiographie')->url($biographie->image)}}');" class="wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.5s" style="position: relative;">	
             </div>
         </div>
     </div>
   </section>
   <!--== Biographies End ==-->
 
+
   {{-- Evenements Start --}}
-  <section>
+  <section class="white-bg">
     <div class="container">
       <div class="row">
         <div class="col-sm-8 section-heading">
@@ -288,19 +288,19 @@
 
   {{-- Engagements Start --}}
 
-<section>
-    <div class="container">
-      <div class="row text-center">
-		      <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.5s">
-        	<h2 class="mt-0 mb-0 font-60px textgold">{{$engagement->titre}}</h2
-        	<p class="mt-30 font-300 font-16px">{!!$description = substr($engagement->contenu, 0, 300)!!} ...</p>
-          <p class="mt-30"><a href="{{route('engagement')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
+	<section class="pt-0">
+    <div class="container para">
+    	<div class="row">
+        	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.5s">
+                <div>
+                <h2 class="textgold">{{$engagement->titre}}</h2>
+					<p>{!!$engagement->contenu!!}</p>
+					<p class="mt-30"><a href="{{route('engagement')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
+                </div>
+			</div>
+			<div style="background-image:url('{{Storage::disk('imgEngagement')->url($engagement->image)}}');" class="wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.5s" style="position: relative;">	
+            </div>
         </div>
-        <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.5s">
-        	<figure class=" mt-30"><img src="{{Storage::disk('imgEngagement')->url($engagement->image)}}" alt="{{$engagement->titre}}" alt="">
-          	</figure>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -309,23 +309,23 @@
 	{{-- Academy Start --}}
 
 	<section class="white-bg">
-    <div class="container">
-      <div class="row">
-		   <div class="col-md-7 col-sm-7 wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
-        		<figure class=" mt-30"><img src="{{Storage::disk('imgAcademie')->url($academie->image)}}" alt="{{$academie->titre}}" alt="">
-          	</figure>
-			</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 col-sm-7 wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+					<figure class=" mt-30"><img src="{{Storage::disk('imgAcademie')->url($academie->image)}}" alt="{{$academie->titre}}" alt="">
+					</figure>
+				</div>
 
-			<div class="text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.5s" style="right:130px; visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
-                <div class="title-section" style="margin-top:60px;">
-            		<h2 class="mt-0 font-600 mt-0 mb-0 font-80px textgold">{{$academie->titre}}</h2>
-                    <p class="font-400" style="width:75%;margin:auto;">{!!$academie->contenu!!} </p>
-					<p class="mt-30"><a href="http://127.0.0.1:8000/academie" class="btn btn-md btn-warning btn-animate btn-square"><span>En savoir plus <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
-            	</div>
-            </div>	
-      </div>
-    </div>
-  </section>
+				<div class="text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.5s" style="right:130px; visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+					<div class="title-section" style="margin-top:60px;">
+						<h2 class="mt-0 font-600 mt-0 mb-0 font-80px textgold">{{$academie->titre}}</h2>
+						<p class="font-400" style="width:75%;margin:auto;">{!!$description = substr($academie->contenu, 0, 400)!!} ...</p>
+						<p class="mt-30"><a href="{{'academie'}}" class="btn btn-md btn-warning btn-animate btn-square"><span>En savoir plus <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</section>
 
   {{-- Academy End --}}
 

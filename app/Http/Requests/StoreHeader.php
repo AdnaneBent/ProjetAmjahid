@@ -24,7 +24,7 @@ class StoreHeader extends FormRequest
     public function rules()
     {
          return [
-            'titre'  =>  "required|max:80",
+            'titre'  =>  "required|max:200",
             'imageBG'  =>  'required|max:20000000|dimensions:min_width=1920,min_height=1080',
 
         ];

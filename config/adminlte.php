@@ -169,6 +169,11 @@ return [
             'url'         => 'admin/galeries',
             'icon'        => 'image',
         ],
+        [
+            'text'        => 'Network',
+            'url'         => 'admin/networks',
+            'icon'        => 'user',
+        ],
     ],
 
     /*

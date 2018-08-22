@@ -13,7 +13,7 @@
         <div class="row justify-content-around">
         @foreach($headers as $header)
         <div class="card col-3 m-4" style="width: 18rem;">
-                <h3 style="padding-top:30%;">Titre : {{$header->titre}}</h3>
+                <h3 style="padding-top:30%;">Titre : {!!$header->titre!!}</h3>
         </div>
         <div class="card col-3 m-4" style="width: 18rem;">
                 <h3>Image d'avant plan</h3>

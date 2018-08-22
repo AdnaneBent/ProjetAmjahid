@@ -3,7 +3,7 @@
 @section('title', 'header')
 
 @section('content_header')
-<h1>Création d'une image pour la header</h1>
+<h1>Modification du header</h1>
 @stop
 
   @section('content')
@@ -21,7 +21,7 @@
         @if($errors->has('titre'))
             <div class="text-danger">{{ $errors->first('titre')}}</div>
         @endif
-        <input type="text" name="titre" value="{{old('titre', $header->titre)}}">
+        <textarea id="hello" type="text" name="titre">{{old('titre', $header->titre)}}</textarea>
         </label>
         {{-- image --}}
         <h5>Image Avant plan</h5>
@@ -47,5 +47,10 @@
     </form>
   </div>
 
+    @section('js')
+  <script>
+    CKEDITOR.replace('hello');
+  </script>
+  @endsection
 
 @endsection

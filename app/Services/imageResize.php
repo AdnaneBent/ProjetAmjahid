@@ -12,8 +12,11 @@ class  ImageResize{
 public  function  imageStore($image)
     {
     $imageName  =  $image['name']->store('',$image['disk']);
-    $resize = Image::make(Storage::disk($image["disk"])->path($imageName))->resize($image['w'],$image['h']);
+    $resize = Image::make(Storage::disk($image["disk"])->path($imageName))->resize(null,$image['h'], function($constraint){
+        $constraint->aspectRatio();
+        $constraint->upsize();
+    });
     $resize->save();
     return  $imageName;
-    }   
+    }
 }

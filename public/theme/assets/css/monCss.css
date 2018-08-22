@@ -1,0 +1,88 @@
+    .img-center {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .mg-image img {
+        -webkit-transition: all 1s ease;
+        /* Safari and Chrome */
+        -moz-transition: all 1s ease;
+        /* Firefox */
+        -o-transition: all 1s ease;
+        /* IE 9 */
+        -ms-transition: all 1s ease;
+        /* Opera */
+        transition: all 1s ease;
+        max-width: 100%;
+    }
+    
+    .mg-image:hover img {
+        -webkit-transform: scale(1.25);
+        /* Safari and Chrome */
+        -moz-transform: scale(1.25);
+        /* Firefox */
+        -ms-transform: scale(1.25);
+        /* IE 9 */
+        -o-transform: scale(1.25);
+        /* Opera */
+        transform: scale(1.25);
+    }
+    
+    .hovnav:hover {
+        color: #be8c3c !important;
+    }
+    
+    .textgold {
+        color: #be8c3c !important;
+    }
+    
+    .navtextcolor {
+        color: black !important;
+    }
+    
+    .backgroundgold {
+        background-color: #be8c3c !important;
+    }
+    
+    .btnAdmin {
+        background-color: #be8c3c !important;
+    }
+    
+    .paralaximg1 {
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    
+    .paralaximg2 {
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: -10;
+    }
+    
+    #parra {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+    
+    .para {
+        /* The image used */
+        /* Full height */
+        height: 400px;
+        width: 100%;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }

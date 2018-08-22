@@ -6,9 +6,14 @@ use App\Engagement;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreEngagement;
 use App\Http\Requests\StoreEditEngagement;
+use Storage;
+use App\Services\imageResize;
 
 class EngagementController extends Controller
 {
+     public function __construct(ImageResize $imageResize){
+        $this->imageResize = $imageResize;
+    }
     /**
      * Display a listing of the resource.
      *
@@ -84,9 +89,13 @@ class EngagementController extends Controller
 
         $engagement->titre = $request->titre;
         $engagement->contenu = $request->contenu;
-        if($request->image != null){
-        $engagement->image = $request->image->store('','imgEngagement');
-        }
+        $image = [
+            "name" => $request->image,
+            "disk" => "imgEngagement",
+            "w" => 1000,
+            "h" => 1000
+        ];
+        $engagement->image = $this->imageResize->imageStore($image);
 
         $engagement->save();
         return redirect()->route('engagements.index',['engagement'=> $engagement->id]);
