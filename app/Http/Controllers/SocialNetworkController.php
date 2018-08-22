@@ -39,6 +39,7 @@ class SocialNetworkController extends Controller
         $socialnetwork = new SocialNetwork;
         $socialnetwork->name = $request->name;
         $socialnetwork->link = $request->link;
+        $socialnetwork->image = $request->image;
 
         $socialnetwork->save();
         return redirect()->route("networks.index");

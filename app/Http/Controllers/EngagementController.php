@@ -41,12 +41,17 @@ class EngagementController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreEngagement $request)
     {
         $engagement = new Engagement;
         $engagement->titre = $request->titre;
         $engagement->contenu = $request->contenu;
-        $engagement->image = $request->image->store('','imgEngagement');
+        $image = [
+            "name" => $request->image,
+            "disk" => "imgEngagement",
+            "h" => 1000
+        ];
+        $engagement->image = $this->imageResize->imageStore($image);
 
         $engagement->save();
         return redirect()->route("engagements.index");
@@ -83,7 +88,7 @@ class EngagementController extends Controller
      * @param  \App\Engagement  $engagement
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(StoreEditEngagement $request, $id)
     {
         $engagement = Engagement::find($id);
 

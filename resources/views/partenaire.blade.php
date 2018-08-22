@@ -22,5 +22,5 @@
   <!--== Clients End ==-->
 
 
-@include('partials.contact')
+@include('partials.contact',$socialnetworks)
 

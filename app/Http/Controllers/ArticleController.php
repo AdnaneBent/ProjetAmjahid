@@ -51,7 +51,7 @@ class ArticleController extends Controller
         $image = [
             "name" => $request->image,
             "disk" => "imgArticle",
-            "w" => 200,
+            "w" => 300,
             "h" => 200
         ];
         $article->image = $this->imageResize->imageStore($image);
@@ -105,7 +105,7 @@ class ArticleController extends Controller
             $image = [
                 "name" => $request->image,
                 "disk" => "imgArticle",
-                "w" => 200,
+                "w" => 300,
                 "h" => 200
             ];
             $article->image = $this->imageResize->imageStore($image);

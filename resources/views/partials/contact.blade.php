@@ -8,8 +8,9 @@
           </div>
           <div class="col-md-6 col-xs-12">
             <ul class="social-media">
-              <li><a href="#" class="icofont icofont-social-facebook"></a></li>
-			  			<li><a href="#" class="icofont icofont-social-instagram"></a></li>
+              @foreach($socialnetworks as $socialnetwork)
+                <li><a href="{{$socialnetwork->link}}"><i class="{{$socialnetwork->image}}"></i></a></li>
+              @endforeach
             </ul>
           </div>
         </div>

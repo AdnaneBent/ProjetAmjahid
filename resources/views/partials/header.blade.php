@@ -22,6 +22,9 @@
 <link rel="stylesheet" type="text/css" href="{{asset('theme/revolution/css/settings.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('theme/revolution/css/layers.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('theme/revolution/css/navigation.css')}}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
 
 </head>
 

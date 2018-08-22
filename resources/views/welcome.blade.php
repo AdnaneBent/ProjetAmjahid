@@ -247,7 +247,7 @@
     <div class="container para">
     	<div class="row">
         	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.5s">
-                <div>
+                <div style="padding:10px;" class="grey-bg img-responsive">
                 <h2 class="textgold">{{$biographie->titre}}</h2>
                     <p>{!!$biographie->contenu!!}</p>
                 </div>
@@ -292,7 +292,7 @@
     <div class="container para">
     	<div class="row">
         	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.5s">
-                <div>
+                <div style="padding:10px;" class="grey-bg">
                 <h2 class="textgold">{{$engagement->titre}}</h2>
 					<p>{!!$engagement->contenu!!}</p>
 					<p class="mt-30"><a href="{{route('engagement')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
@@ -350,4 +350,4 @@
   </section>
 	<!--== Portfolio End ==-->
 
-@include('partials.contact')
+@include('partials.contact', $socialnetworks)

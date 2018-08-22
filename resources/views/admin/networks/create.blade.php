@@ -29,7 +29,15 @@
           @if($errors->has('link'))
           <div class="text-danger">{{ $errors->first('link')}}</div>
           @endif
-          <input type="text" name="link" class="form-control" value="{{old('link')}}" placeholder="Nom" >
+          <input type="text" name="link" class="form-control" value="{{old('link')}}" placeholder="l'url du réseau social" >
+        </div>
+        <div class="form-group">
+          {{-- name --}}
+          <label for="image">Le fontawesome</label>
+          @if($errors->has('image'))
+          <div class="text-danger">{{ $errors->first('image')}}</div>
+          @endif
+          <input type="text" name="image" class="form-control" value="{{old('image')}}" placeholder="l'image fontawesome" >
         </div><br>
         <br>
         <button type="submit" style="background-color:#be8c3c;color:white;" class="btn btnAdmin">Enregistrer</button>
