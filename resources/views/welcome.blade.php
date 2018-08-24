@@ -246,7 +246,7 @@
    <section class="pt-0">
     <div class="container para">
     	<div class="row">
-        	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.5s">
+        	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.3s">
                 <div style="padding:10px;" class="grey-bg img-responsive">
                 <h2 class="textgold">{{$biographie->titre}}</h2>
                     <p>{!!$biographie->contenu!!}</p>
@@ -272,7 +272,7 @@
     	<div class="row mt-50">
 			@foreach($evenements as $evenement)
 			<div class="col-md-4 col-sm-4 col-xs-12">
-				<div class="feature-box text-center feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.5s" style="visibility: visible; height:200px; width:100%; animation-delay: 0.5s; animation-name: fadeInUp;">
+				<div class="feature-box text-center feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.3s" style="visibility: visible; height:200px; width:100%; animation-delay: 0.3s; animation-name: fadeInUp;">
 					<span class="font-50px textgold">{{$evenement->date}}</span>
 					<h4 class="mt-0 font-400">{{$evenement->name}}</h4>
 					<p class="font-400">More info</p>
@@ -291,7 +291,7 @@
 	<section class="pt-0">
     <div class="container para">
     	<div class="row">
-        	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.5s">
+        	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.3s">
                 <div style="padding:10px;" class="grey-bg">
                 <h2 class="textgold">{{$engagement->titre}}</h2>
 					<p>{!!$engagement->contenu!!}</p>
@@ -311,12 +311,12 @@
 	<section class="white-bg">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-7 col-sm-7 wow fadeInRight" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+				<div class="col-md-7 col-sm-7 wow fadeInRight" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
 					<figure class=" mt-30"><img src="{{Storage::disk('imgAcademie')->url($academie->image)}}" alt="{{$academie->titre}}" alt="">
 					</figure>
 				</div>
 
-				<div class="text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.5s" style="right:130px; visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+				<div class="text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.3s" style="right:130px; visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
 					<div class="title-section" style="margin-top:60px;">
 						<h2 class="mt-0 font-600 mt-0 mb-0 font-80px textgold">{{$academie->titre}}</h2>
 						<p class="font-400" style="width:75%;margin:auto;">{!!$description = substr($academie->contenu, 0, 400)!!} ...</p>
@@ -329,7 +329,7 @@
 
   {{-- Academy End --}}
 
-   <!--== Portfolio Start ==-->
+   <!--== Galerie Start ==-->
   <section class="pb-0">
 		<div class="container-fluid">
 				<h1 class="text-center textgold">Galerie</h1>
@@ -348,6 +348,6 @@
         </div>
     </div>
   </section>
-	<!--== Portfolio End ==-->
+	<!--== Galerie End ==-->
 
 @include('partials.contact', $socialnetworks)

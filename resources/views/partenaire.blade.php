@@ -10,7 +10,7 @@
           <div class="white-bg text-center display-table mb-30 full-width client-logo-height container">
               <div class="v-align-middle img-responsive">
                 <a href="http://{{$partenaire->url}}" target="_blank">
-                  <img src="{{Storage::disk('imgPartenaire')->url($partenaire->image)}}" alt="{{$partenaire->name}}" alt="">
+                  <img style="width:50%;" src="{{Storage::disk('imgPartenaire')->url($partenaire->image)}}" alt="{{$partenaire->name}}" alt="">
                 </a>
               </div>
           </div>

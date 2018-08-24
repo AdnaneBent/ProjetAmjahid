@@ -50,7 +50,8 @@ class BiographieController extends Controller
         $image = [
             "name" => $request->image,
             "disk" => "imgBiographie",
-            "h" => 1000
+            "h" => 1000,
+            "w" => null
         ];
         $biographie->image = $this->imageResize->imageStore($image);
 

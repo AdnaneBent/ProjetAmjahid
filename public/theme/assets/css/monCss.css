@@ -78,17 +78,15 @@
     }
     
     .para {
-        /* The image used */
         /* Full height */
         height: 400px;
-        width: 100%;
+        width: 90%;
         /* Create the parallax scrolling effect */
         background-attachment: fixed;
         background-repeat: no-repeat;
     }
     
     .para2 {
-        /* The image used */
         /* Full height */
         height: 400px;
         /* Create the parallax scrolling effect */

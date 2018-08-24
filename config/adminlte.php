@@ -114,35 +114,25 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-         [
-            'text'        => 'Headers',
-            'url'         => 'admin/headers',
-            'icon'        => 'image',
+        [
+            'text'        => 'Academie',
+            'url'         => 'admin/academies',
+            'icon'        => 'file',
         ],
         [
-            'text'        => 'Biographies',
-            'url'         => 'admin/biographies',
-            'icon'        => 'user',
+            'text'        => 'Articles',
+            'url'         => 'admin/articles',
+            'icon'        => 'file',
         ],
         [
             'text'        => 'Athlete',
             'url'         => 'admin/athlete',
             'icon'        => 'file',
         ],
-         [
-            'text'        => 'Partenaires',
-            'url'         => 'admin/partenaires',
-            'icon'        => 'file',
-        ],
-         [
-            'text'        => 'Articles',
-            'url'         => 'admin/articles',
-            'icon'        => 'file',
-        ],
-         [
-            'text'        => 'Palmares',
-            'url'         => 'admin/palmares',
-            'icon'        => 'file',
+        [
+            'text'        => 'Biographies',
+            'url'         => 'admin/biographies',
+            'icon'        => 'user',
         ],
         [
             'text'        => 'Carousels',
@@ -160,14 +150,24 @@ return [
             'icon'        => 'file',
         ],
         [
-            'text'        => 'Academie',
-            'url'         => 'admin/academies',
-            'icon'        => 'file',
-        ],
-        [
             'text'        => 'Galerie',
             'url'         => 'admin/galeries',
             'icon'        => 'image',
+        ],
+        [
+            'text'        => 'Headers',
+            'url'         => 'admin/headers',
+            'icon'        => 'image',
+        ],
+        [
+           'text'        => 'Palmares',
+           'url'         => 'admin/palmares',
+           'icon'        => 'file',
+        ],
+        [
+            'text'        => 'Partenaires',
+            'url'         => 'admin/partenaires',
+            'icon'        => 'file',
         ],
         [
             'text'        => 'Network',
