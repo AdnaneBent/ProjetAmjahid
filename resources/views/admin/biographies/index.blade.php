@@ -15,7 +15,7 @@
                 <img class="profile-user-img img-responsive img-circle" style="width:20%;" src="{{Storage::disk('imgBiographie')->url($biographie->image)}}" alt="Card image cap">
             </div>
                 
-            <h3 class="profile-username text-center"> {{$biographie->titre}}</h3>
+            <h3 class="profile-username text-center">{{$biographie->titre}}</h3>
             <br>
             <div class="card-body">
                 <h3>    

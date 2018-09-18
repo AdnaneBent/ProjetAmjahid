@@ -234,7 +234,7 @@
     			data-paddingbottom="[0,0,0,0]"
     			data-paddingleft="[20,20,20,20]"
 
-    			style="z-index: 14; white-space: nowrap; font-size: 15px; line-height: 20px; font-weight: 600; color: #888888; letter-spacing: 10px;font-family: 'Montserrat', sans-serif;text-transform:uppercase;">{!!$header->titre!!}</div>
+    			style="margin-bottom:20px; z-index: 14; white-space: nowrap; font-size: 15px; line-height: 20px; font-weight: 600; color: #888888; letter-spacing: 10px;font-family: 'Montserrat', sans-serif;text-transform:uppercase;">{!!$header->titre!!}</div>
     	</li>
     </ul>
     <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
@@ -247,9 +247,9 @@
     <div class="container para">
     	<div class="row">
         	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.3s">
-                <div style="padding:10px;" class="grey-bg img-responsive">
-                <h2 class="textgold">{{$biographie->titre}}</h2>
-                    <p>{!!$biographie->contenu!!}</p>
+                <div style="padding:30px;" class="grey-bg img-responsive">
+                <h2 class="textgold font-50px">{{$biographie->titre}}</h2>
+                    <p class="text-justify" style="text-align:justify;padding-top:10px;">{!!$biographie->contenu!!}</p>
                 </div>
 			</div>
 			<div style="background-image:url('{{Storage::disk('imgBiographie')->url($biographie->image)}}');" class="wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.5s" style="position: relative;">	
@@ -292,9 +292,9 @@
     <div class="container para">
     	<div class="row">
         	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.3s">
-                <div style="padding:10px;" class="grey-bg">
-                <h2 class="textgold">{{$engagement->titre}}</h2>
-					<p>{!!$engagement->contenu!!}</p>
+                <div style="padding:30px;" class="grey-bg">
+                <h2 class="textgold font-50px">{{$engagement->titre}}</h2>
+					<p style="padding-top:10px;text-align:justify;">{!!$engagement->contenu!!}</p>
 					<p class="mt-30"><a href="{{route('engagement')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
                 </div>
 			</div>
@@ -318,9 +318,9 @@
 
 				<div class="text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.3s" style="right:130px; visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
 					<div class="title-section" style="margin-top:60px;">
-						<h2 class="mt-0 font-600 mt-0 mb-0 font-80px textgold">{{$academie->titre}}</h2>
-						<p class="font-400" style="width:75%;margin:auto;">{!!$description = substr($academie->contenu, 0, 400)!!} ...</p>
-						<p class="mt-30"><a href="{{'academie'}}" class="btn btn-md btn-warning btn-animate btn-square"><span>En savoir plus <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
+						<h2 class="mt-0 font-600 mt-0 mb-0 font-50px textgold">{{$academie->titre}}</h2>
+						<p class="font-400" style="width:75%;margin:auto; padding-top:20px;">{!!$description = substr($academie->contenu, 0, 400)!!} ...</p>
+						<p style="padding-bottom:20px;text-align:justify;" class="mt-30"><a href="{{'academie'}}" class="btn btn-md btn-warning btn-animate btn-square"><span>En savoir plus <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
 					</div>
 				</div>	
 			</div>

@@ -62,7 +62,7 @@
             <div class="col-md-6 wow fadeInRight mt-100" data-wow-delay="0.5s">
                 <div>
                 <h2 class="textgold">{{$biographie->titre}}</h2>
-                    <p>{!!$biographie->contenu!!}</p>
+                    <p style="padding-top:10px;">{!!$biographie->contenu!!}</p>
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
 
 <section class="pt-0">
     <div class="container">
-        <h1 class="textgold wow fadeInRight">Le palmares</h1>
+        <h1 class="textgold wow fadeInRight font-50px">Le palmares</h1>
             <br>
         <table class="table table-light white-bg">
             <thead>

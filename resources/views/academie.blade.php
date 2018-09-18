@@ -11,15 +11,14 @@
                     <div >
                 <img style="width:70%;" src="{{Storage::disk('imgAcademie')->url($academie->image)}}" alt="{{$academie->name}}" alt="">
             </div>
-            <div class="grey-bg">
-                <p class="mt-30 font-300 font-16px grey-bg">{!!$academie->contenu!!}</p>
+            <div style="padding-bottom:10px;" class="grey-bg">
+                <p style="padding:10px;" class="mt-30 font-300 font-16px grey-bg">{!!$academie->contenu!!}</p>
             </div>
         </div>
         <br>
     </div>
 </section>
-    
-    
+
 	{{-- academie End --}}
 
 @include('partials.contact',$socialnetworks)

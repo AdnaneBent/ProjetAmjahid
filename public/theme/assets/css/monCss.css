@@ -93,3 +93,7 @@
         background-attachment: fixed;
         background-repeat: no-repeat;
     }
+    
+    .text-justify {
+        text-align: justify !important;
+    }
