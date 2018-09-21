@@ -60,7 +60,7 @@
        	    	<img class="img-responsive" src="{{Storage::disk('imgBiographie')->url($biographie->image)}}" alt="{{$biographie->titre}}" alt="">
             </div>
             <div class="col-md-6 wow fadeInRight mt-100" data-wow-delay="0.5s">
-                <div>
+                <div style="text-align:justify;">
                 <h2 class="textgold">{{$biographie->titre}}</h2>
                     <p style="padding-top:10px;">{!!$biographie->contenu!!}</p>
                 </div>

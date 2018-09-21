@@ -19,7 +19,7 @@
                             <img src="{{Storage::disk('imgArticle')->url($article->image)}}" alt="{{$article->name}}" alt="">
                         </div>
                     </div>
-                    <div class="">
+                    <div style="margin-right: 100px;text-align: justify;">
                          <p> {!!$description = substr($article->contenu, 0, 300)!!} ... </p>
                          <a href="{{route('presseshow',['article'=>$article->id])}}" class="btn btn-md btn-warning btn-animate btn-square mb-40"><span>Read more <i class="tr-icon icofont icofont-arrow-right"></i></span></a>
                     </div>

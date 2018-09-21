@@ -46,11 +46,22 @@ class EngagementController extends Controller
         $engagement = new Engagement;
         $engagement->titre = $request->titre;
         $engagement->contenu = $request->contenu;
-        $image = [
-            "name" => $request->image,
-            "disk" => "imgEngagement",
-            "h" => 1000
-        ];
+         if ($request->image != null)
+        {
+            Storage::disk('imgEngagement')->delete($engagement->image);
+           
+    
+            $image = [
+                "name" => $request->image,
+                "disk" => "imgEngagement",
+                "h" => 1000
+            ];
+            $engagement->image = $this->imageResize->imageStore($image);
+        }
+
+
+
+
         $engagement->image = $this->imageResize->imageStore($image);
 
         $engagement->save();
@@ -94,14 +105,21 @@ class EngagementController extends Controller
 
         $engagement->titre = $request->titre;
         $engagement->contenu = $request->contenu;
-        $image = [
-            "name" => $request->image,
-            "disk" => "imgEngagement",
-            "w" => 1000,
-            "h" => 1000
-        ];
-        $engagement->image = $this->imageResize->imageStore($image);
-
+        
+        if ($request->image != null)
+        {
+            Storage::disk('imgEngagement')->delete($engagement->image);
+           
+    
+            $image = [
+                "name" => $request->image,
+                "disk" => "imgEngagement",
+                "w" => 1000,
+                "h" => 1000
+            ];
+        
+            $engagement->image = $this->imageResize->imageStore($image);
+        }
         $engagement->save();
         return redirect()->route('engagements.index',['engagement'=> $engagement->id]);
     }

@@ -7,7 +7,7 @@
         <div class="row">
 		    <div class="wow fadeInLeft" data-wow-delay="0.2s">
         	<h2 class="mt-0 mb-0 font-80px textgold">{{$engagement->titre}}</h2>
-        	<p style="text-align: justify;" class="mt-30 font-300 font-16px">{!!$engagement->contenu!!}</p>
+        	<p class="mt-30 font-300 font-16px">{!!$engagement->contenu!!}</p>
         </div>
     </div>
     <br>
