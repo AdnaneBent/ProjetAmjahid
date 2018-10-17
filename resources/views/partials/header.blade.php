@@ -12,6 +12,7 @@
 <title></title>
 <link rel="shortcut icon" href="assets/images/favicon.ico">
 
+
 <!-- Core Style Sheets -->
 <link rel="stylesheet" href="{{asset('theme/assets/css/master.css')}}">
 {{-- Mon CSS --}}
@@ -81,7 +82,7 @@
       <!--== Start Header Navigation ==-->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu"> <i class="tr-icon ion-android-menu"></i> </button>
-        <div class="logo"> <a href="index.html"> <img class="logo logo-display" src="assets/images/logo-white.png" alt=""> <img class="logo logo-scrolled" src="assets/images/logo-black.png" alt=""> </a> </div>
+        <div class="logo"> <a href="index.html"> <img class="logo logo-display" src="" alt=""> <img class="logo logo-scrolled" src="" alt=""> </a> </div>
       </div>
       <!--== End Header Navigation ==-->
 

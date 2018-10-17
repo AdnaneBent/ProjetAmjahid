@@ -97,3 +97,49 @@
     .text-justify {
         text-align: justify !important;
     }
+
+    @media screen and (min-width: 320px) and (max-width: 640px) {
+        .fontsm {
+            font-size: 45px !important;
+        }
+        /* .taillesmAV{
+            width: 100% !important;
+            height: auto !important;
+        } */
+
+        .parainvs{
+            overflow: auto !important;
+        }
+        /* Pour les titres en mode téléphone */
+        .fontsm30{
+            font-size: 30px !important;
+        }
+
+        /* Pour la partie académie de l'accueil "mode téléphone" */
+        .movesm{
+            padding:30px !important;
+            text-align:justify !important;
+            right:0% !important;
+        }
+
+        /* Pour la taille du carousel de la partie engagement */
+        .img30{
+            width: 30% !important;
+        }
+
+        /* Pour les textes de la partie presse */
+        .presstxt{
+            padding: 30px !important;
+            margin-right:50px !important;
+        }
+
+        /* Pour le titre "section presse" et pour les dates*/
+        .h1press{
+            padding-left: 20px!important;
+        }
+        
+        /* Pour les images de la partie press */
+        .imgpress{
+            padding-left: 10px !important;
+        }
+      }

@@ -4,7 +4,7 @@
     <div class="container">
       <div style="text-align:justify;" class="row">
 		      <div class="col-md-6 col-sm-6 col-xs-12 wow fadeInLeft" data-wow-delay="0.1s">
-        	<h2 style="margin-bottom:10px;" class="mt-0 mb-0 font-60px textgold">{{$article->titre}}</h2
+        	<h2 style="margin-bottom:10px;" class="mt-0 mb-0 font-60px textgold">{{$article->titre}}</h2>
         	<p class="mt-30 font-300 font-16px">{!!$article->contenu!!}</p>
         </div>
         <div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.2s">

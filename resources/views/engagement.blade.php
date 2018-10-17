@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
 		    <div class="wow fadeInLeft" data-wow-delay="0.2s">
-        	<h2 class="mt-0 mb-0 font-80px textgold">{{$engagement->titre}}</h2>
+        	<h2 class="fontsm30 mt-0 mb-0 font-80px textgold">{{$engagement->titre}}</h2>
         	<p class="mt-30 font-300 font-16px">{!!$engagement->contenu!!}</p>
         </div>
     </div>
@@ -19,7 +19,7 @@
         <div class="carousel-inner" role="listbox">
             @foreach($carousels as $carousel)
             <div class="item {{ $loop->first ? ' active' : '' }}" >
-                <img class="img-fluid" src="{{Storage::disk('imgCarousel')->url($carousel->image)}}" alt="{{$carousel->name}}" alt="">
+                <img class="img30 img-fluid" src="{{Storage::disk('imgCarousel')->url($carousel->image)}}" alt="{{$carousel->name}}" alt="">
             </div>
             @endforeach
 

@@ -12,11 +12,11 @@
     		<!-- LAYERS -->
 
     		<!-- LAYER NR. 1 -->
-    		<div class="tp-caption   tp-resizeme  blurslider-gradient rs-parallaxlevel-14"
+    		<div class="fontsm tp-caption tp-resizeme  blurslider-gradient rs-parallaxlevel-14"
     			 id="slide-896-layer-2"
     			 data-x="['center','center','center','center']" data-hoffset="['1','1','1','1']"
     			 data-y="['middle','middle','middle','middle']" data-voffset="['-229','-229','-189','-149']"
-    						data-fontsize="['150','150','150','80']"
+    			data-fontsize="['150','150','150','80']"
     			data-lineheight="['120','120','120','60']"
     			data-letterspacing="['-10','-10','-10','-5']"
     			data-width="none"
@@ -54,7 +54,7 @@
     			data-paddingbottom="[0,0,0,0]"
     			data-paddingleft="[0,0,0,0]"
 
-    			style="z-index: 6;"><img src="{{Storage::disk('imgHeaderAV')->url($header->imageAV)}}" alt="{{$header->titre}}" alt="" data-ww="['1050px','1050px','861','689px']" data-hh="['610px','610px','500px','400px']" width="1050" height="610" data-no-retina> </div>
+    			style="z-index: 6;"><img class="taillesmAV" src="{{Storage::disk('imgHeaderAV')->url($header->imageAV)}}" alt="{{$header->titre}}" alt="" data-ww="['1050px','1050px','861','689px']" data-hh="['610px','610px','500px','400px']" width="1050" height="610" data-no-retina> </div>
 
     		<!-- LAYER NR. 3 -->
     		<div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme"
@@ -248,11 +248,11 @@
     	<div class="row">
         	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.3s">
                 <div style="padding:30px;text-align:justify;" class="grey-bg img-responsive">
-                <h2 class="textgold font-50px">{{$biographie->titre}}</h2>
+                <h2 class="textgold font-50px fontsm30">{{$biographie->titre}}</h2>
                     <p style="padding-top:10px;">{!!$biographie->contenu!!}</p>
                 </div>
 			</div>
-			<div style="background-image:url('{{Storage::disk('imgBiographie')->url($biographie->image)}}');" class="wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.5s" style="position: relative;">	
+			<div class="parainvs" style="background-image:url('{{Storage::disk('imgBiographie')->url($biographie->image)}}');" class="wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.5s" style="position: relative;">	
             </div>
         </div>
     </div>
@@ -293,7 +293,7 @@
     	<div class="row">
         	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.3s">
                 <div style="padding:30px;text-align:justify;" class="grey-bg">
-                <h2 class="textgold font-50px">{{$engagement->titre}}</h2>
+                <h2 class="fontsm30 textgold font-50px">{{$engagement->titre}}</h2>
 					<p style="padding-top:10px;text-align:justify;">{!!$engagement->contenu!!}</p>
 					<p class="mt-30"><a href="{{route('engagement')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
                 </div>
@@ -316,9 +316,9 @@
 					</figure>
 				</div>
 
-				<div class="text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.3s" style="right:130px; visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+				<div class="movesm text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.3s" style="right:130px; visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
 					<div class="title-section" style="margin-top:60px;text-align:justify;">
-						<h2 class="mt-0 mt-0 mb-0 font-50px textgold">{{$academie->titre}}</h2>
+						<h2 class="mt-0 mb-0 font-50px textgold">{{$academie->titre}}</h2>
 						<p class="font-400" style="width:75%;margin:auto; padding-top:20px;">{!!$description = substr($academie->contenu, 0, 400)!!} ...</p>
 					</div>
 					<p style="padding-bottom:20px;" class="mt-30"><a href="{{'academie'}}" class="btn btn-md btn-warning btn-animate btn-square"><span>En savoir plus <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
