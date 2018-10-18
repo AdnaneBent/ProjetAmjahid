@@ -9,8 +9,8 @@
           @foreach($articles as $article)
           <!-- Post item -->
           <div class="col-md-6 col-sm-6 col-xs-12">
-              <h2 class="textgold pt-10">{{$article->titre}}</h2>
-              <div class=" wow fadeInUp row" data-wow-delay="0.1s">
+              <h2 class="textgold">{{$article->titre}}</h2>
+              <div class="pressmd wow fadeInUp row" data-wow-delay="0.1s">
                     <div class="post-date mt-60">
                         <h4 class="h1press">{{$article->created_at->format('d M Y')}}</h4>
                     </div>

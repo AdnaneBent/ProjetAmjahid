@@ -19,7 +19,7 @@
         <div class="carousel-inner" role="listbox">
             @foreach($carousels as $carousel)
             <div class="item {{ $loop->first ? ' active' : '' }}" >
-                <img class="img30 img-fluid" src="{{Storage::disk('imgCarousel')->url($carousel->image)}}" alt="{{$carousel->name}}" alt="">
+                <img class="img70 img30 img-fluid" src="{{Storage::disk('imgCarousel')->url($carousel->image)}}" alt="{{$carousel->name}}" alt="">
             </div>
             @endforeach
 

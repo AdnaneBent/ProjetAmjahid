@@ -168,7 +168,7 @@
     			data-paddingleft="[0,0,0,0]"
 
     			style="z-index: 11;">
-    <div class="rs-looped rs-slideloop"  data-easing="Linear.easeNone" data-speed="80" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="assets/images/cloud3.png" alt="" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" width="738" height="445" data-no-retina> </div></div>
+    		<div class="rs-looped rs-slideloop"  data-easing="Linear.easeNone" data-speed="80" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="assets/images/cloud3.png" alt="" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" width="738" height="445" data-no-retina> </div></div>
 
     		<!-- LAYER NR. 8 -->
     		<div class="tp-caption   tp-resizeme"
@@ -191,7 +191,7 @@
     			data-paddingleft="[0,0,0,0]"
 
     			style="z-index: 12;">
-    <div class="rs-looped rs-slideloop"  data-easing="Linear.easeNone" data-speed="200" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="../../assets/images/cloud1.png" alt="" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" width="500" height="273" data-no-retina> </div></div>
+    		<div class="rs-looped rs-slideloop"  data-easing="Linear.easeNone" data-speed="200" data-xs="0" data-xe="500" data-ys="0" data-ye="0"><img src="../../assets/images/cloud1.png" alt="" data-ww="['500px','500px','500px','500px']" data-hh="['273px','273px','273px','273px']" width="500" height="273" data-no-retina> </div></div>
 
     		<!-- LAYER NR. 9 -->
     		<div class="tp-caption rev-btn "
@@ -233,7 +233,6 @@
     			data-paddingright="[10,10,10,10]"
     			data-paddingbottom="[0,0,0,0]"
     			data-paddingleft="[20,20,20,20]"
-
     			style="margin-bottom:20px; z-index: 14; white-space: nowrap; font-size: 15px; line-height: 20px; font-weight: 600; color: #888888; letter-spacing: 10px;font-family: 'Montserrat', sans-serif;text-transform:uppercase;">{!!$header->titre!!}</div>
     	</li>
     </ul>
@@ -248,11 +247,12 @@
     	<div class="row">
         	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.3s">
                 <div style="padding:30px;text-align:justify;" class="grey-bg img-responsive">
-                <h2 class="textgold font-50px fontsm30">{{$biographie->titre}}</h2>
-                    <p style="padding-top:10px;">{!!$biographie->contenu!!}</p>
+                <h2 class="textgold font-40px fontsm30">{{$biographie->titre}}</h2>
+                    <p style="padding-top:10px;">{!!$description = substr($biographie->contenu, 0, 500)!!} ...</p>
+					<p class="mt-30"><a href="{{route('athlete')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
                 </div>
 			</div>
-			<div class="parainvs" style="background-image:url('{{Storage::disk('imgBiographie')->url($biographie->image)}}');" class="wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.5s" style="position: relative;">	
+			<div style="background-image:url('{{Storage::disk('imgBiographie')->url($biographie->image)}}');" class="imgdisp wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.5s" style="position: relative;">	
             </div>
         </div>
     </div>
@@ -273,7 +273,7 @@
 			@foreach($evenements as $evenement)
 			<div class="col-md-4 col-sm-4 col-xs-12">
 				<div class="feature-box text-center feature-box-rounded wow fadeInUp center-feature" data-wow-delay="0.3s" style="visibility: visible; height:200px; width:100%; animation-delay: 0.3s; animation-name: fadeInUp;">
-					<span class="font-50px textgold">{{$evenement->date}}</span>
+					<span class="fontmd30 font-40px textgold">{{$evenement->date}}</span>
 					<h4 class="mt-0 font-400">{{$evenement->name}}</h4>
 					<p class="font-400">More info</p>
 				</div>
@@ -293,12 +293,12 @@
     	<div class="row">
         	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.3s">
                 <div style="padding:30px;text-align:justify;" class="grey-bg">
-                <h2 class="fontsm30 textgold font-50px">{{$engagement->titre}}</h2>
-					<p style="padding-top:10px;text-align:justify;">{!!$engagement->contenu!!}</p>
+                <h2 class="fontsm30 textgold font-40px">{{$engagement->titre}}</h2>
+					<p style="padding-top:10px;text-align:justify;"> {!!$description = substr($engagement->contenu, 0, 400)!!} ...</p>
 					<p class="mt-30"><a href="{{route('engagement')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
                 </div>
 			</div>
-			<div style="background-image:url('{{Storage::disk('imgEngagement')->url($engagement->image)}}');" class="wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.5s" style="position: relative;">	
+			<div style="background-image:url('{{Storage::disk('imgEngagement')->url($engagement->image)}}');" class="imgdisp wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.5s" style="position: relative;">	
             </div>
         </div>
     </div>
@@ -316,12 +316,13 @@
 					</figure>
 				</div>
 
-				<div class="movesm text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.3s" style="right:130px; visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
+				<div class="txtacad movesm text-center wow fadeInUp col-md-5 col-sm-5 grey-bg" data-wow-delay="0.3s" style="right:130px; visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">
 					<div class="title-section" style="margin-top:60px;text-align:justify;">
-						<h2 class="mt-0 mb-0 font-50px textgold">{{$academie->titre}}</h2>
+						<h2 class="mt-0 mb-0 font-40px textgold">{{$academie->titre}}</h2>
 						<p class="font-400" style="width:75%;margin:auto; padding-top:20px;">{!!$description = substr($academie->contenu, 0, 400)!!} ...</p>
 					</div>
-					<p style="padding-bottom:20px;" class="mt-30"><a href="{{'academie'}}" class="btn btn-md btn-warning btn-animate btn-square"><span>En savoir plus <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
+					<p style="padding-bottom:20px;" class="mt-30"><a href="{{'academie'}}" class="btn btn-md btn-warning btn-animate btn-square">
+					<span>En savoir plus <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
 				</div>	
 			</div>
 		</div>

@@ -107,9 +107,9 @@
             height: auto !important;
         } */
 
-        .parainvs{
+        /* .parainvs{
             overflow: auto !important;
-        }
+        } */
         /* Pour les titres en mode téléphone */
         .fontsm30{
             font-size: 30px !important;
@@ -141,5 +141,45 @@
         /* Pour les images de la partie press */
         .imgpress{
             padding-left: 10px !important;
+        }
+
+        .imgdisp{
+            display: none;
+        }
+        
+      }
+
+      @media screen and (max-width: 768px){
+
+        /* Pour les titres de la partie evenemnt */
+        .fontmd30{
+            font-size: 30px !important;
+        }
+
+        /* Pour le texte de l'académie en mode tablette */
+        .txtacad{
+            right: 0px !important;
+        }
+
+        /* Pour la taille du carousel en mode tablette */
+        .img70{
+            width: 73%!important;
+        }
+
+        /* Décalage sur la droite pour les articles de la section presse */
+        .pressmd{
+            padding: 20px;
+        }
+
+        .imgdisp{
+            display: none;
+        }
+
+      }
+
+      @media screen and (max-width: 1000px){
+
+        .imgdisp{
+            display: none;
         }
       }
