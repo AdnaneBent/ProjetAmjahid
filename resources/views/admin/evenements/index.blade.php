@@ -13,10 +13,10 @@
     <div class="row justify-content-around">
     @foreach($evenements as $evenement)
         <div class="card col-3 m-4" style="width: 18rem;">
-            <h3>{{$evenement->name}}</h3>
-            <h3>{{$evenement->date}}</h3>
+            <h4>{{$evenement->name}}</h3>
+            <h4>{{$evenement->date}}</h3>
             <div class="card-body d-flex">
-                <a class="btn btn-primary" style="background-color:#be8c3c;color:white;margin-left:50px;" href="{{route('evenements.edit',['evenement'=>$evenement->id])}}">Editer</a>
+                <a class="btn btn-primary" style="background-color:#be8c3c;color:white;    height: 35px;" href="{{route('evenements.edit',['evenement'=>$evenement->id])}}">Editer</a>
             
             <form action="{{route('evenements.destroy',['evenement'=>$evenement->id])}}" method="post">
                 @method('DELETE')

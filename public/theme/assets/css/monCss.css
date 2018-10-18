@@ -107,9 +107,6 @@
             height: auto !important;
         } */
 
-        /* .parainvs{
-            overflow: auto !important;
-        } */
         /* Pour les titres en mode téléphone */
         .fontsm30{
             font-size: 30px !important;
@@ -181,5 +178,15 @@
 
         .imgdisp{
             display: none;
+        }
+      }
+
+      @media screen and (min-width: 1000px) and (max-width: 2560px) {
+        .imgA{
+            Z-INDEX: 1 !important;
+            position: absolute !important;
+            width: 65% !important;
+            visibility: visible !important;
+            display: none !important;
         }
       }

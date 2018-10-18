@@ -16,7 +16,7 @@
             <h3>{{$carousel->name}}</h3>
             <img class="card-img-top mt-2" src="{{Storage::disk('imgCarousel')->url($carousel->image)}}" alt="Card image cap">
             <div class="card-body d-flex">
-                <a class="btn btn-primary" style="background-color:#be8c3c;color:white;margin-left:30px;" href="{{route('carousels.edit',['carousel'=>$carousel->id])}}">Editer</a>
+                <a class="btn btn-primary" style="background-color:#be8c3c;color:white;    height: 35px;" href="{{route('carousels.edit',['carousel'=>$carousel->id])}}">Editer</a>
                 <form action="{{route('carousels.destroy',['carousel'=>$carousel->id])}}" method="post">
                     @method('DELETE')
                     @csrf

@@ -16,7 +16,7 @@
             <h2>{{$socialnetwork->name}}</h2>
             <h4><i class="{{$socialnetwork->image}}"></i></h4>
             <div class="card-body d-flex">
-                <a class="btn btn-primary" style="background-color:#be8c3c;color:white;margin-left:30px;" href="{{route('networks.edit',['socialnetwork'=>$socialnetwork->id])}}">Editer</a>
+                <a class="btn btn-primary" style="background-color:#be8c3c;color:white;    height: 35px;" href="{{route('networks.edit',['socialnetwork'=>$socialnetwork->id])}}">Editer</a>
             <form action="{{route('networks.destroy',['socialnetwork'=>$socialnetwork->id])}}" method="post">
                 @method('DELETE')
                 @csrf

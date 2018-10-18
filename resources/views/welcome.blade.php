@@ -245,14 +245,15 @@
    <section class="pt-0">
     <div class="container para">
     	<div class="row">
-        	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.3s">
+        	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" 						data-wow-delay="0.9s">
                 <div style="padding:30px;text-align:justify;" class="grey-bg img-responsive">
                 <h2 class="textgold font-40px fontsm30">{{$biographie->titre}}</h2>
                     <p style="padding-top:10px;">{!!$description = substr($biographie->contenu, 0, 500)!!} ...</p>
 					<p class="mt-30"><a href="{{route('athlete')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
                 </div>
 			</div>
-			<div style="background-image:url('{{Storage::disk('imgBiographie')->url($biographie->image)}}');" class="imgdisp wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.5s" style="position: relative;">	
+			<div style="background-image:url('{{Storage::disk('imgBiographie')->url($biographie->image)}}');" class="imgdisp wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.1s" style="position: relative;">
+				
             </div>
         </div>
     </div>
@@ -291,14 +292,17 @@
 	<section class="pt-0">
     <div class="container para">
     	<div class="row">
-        	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.3s">
+        	<div style="float:right;" class="col-md-5 wow fadeInRight mt-100" data-wow-delay="0.9s">
                 <div style="padding:30px;text-align:justify;" class="grey-bg">
                 <h2 class="fontsm30 textgold font-40px">{{$engagement->titre}}</h2>
 					<p style="padding-top:10px;text-align:justify;"> {!!$description = substr($engagement->contenu, 0, 400)!!} ...</p>
 					<p class="mt-30"><a href="{{route('engagement')}}" class="btn btn-md btn-warning btn-animate btn-square"><span>Découvrir <i class="tr-icon icofont icofont-arrow-right"></i></span></a></p>
                 </div>
 			</div>
-			<div style="background-image:url('{{Storage::disk('imgEngagement')->url($engagement->image)}}');" class="imgdisp wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.5s" style="position: relative;">	
+			<div style="background-image:url('{{Storage::disk('imgEngagement')->url($engagement->image)}}');" class="imgdisp wow fadeInLeft mt-80 mb-80 para" data-wow-delay="0.1s" style="position: relative;">
+				<figure>
+					<img class="imgA wow fadeInLeft para" src="{{Storage::disk('imgEngagement')->url($engagement->image)}}" alt="{{$engagement->name}}" alt="mes engagements">
+				</figure>
             </div>
         </div>
     </div>
